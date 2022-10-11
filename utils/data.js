@@ -1,0 +1,122 @@
+const data = {
+  match1: [
+    {
+      teamA: "Senegal",
+      flagA: "/sen.png",
+      teamB: "Holanda",
+      flagB: "/hol.png",
+    },
+    {
+      teamA: "Qatar",
+      flagA: "/qat.jpg",
+      teamB: "Ecuador",
+      flagB: "/ecu.jpg",
+    },
+    {
+      teamA: "Inglaterra",
+      flagA: "/ing.jpg",
+      teamB: "Iran",
+      flagB: "/ira.gif",
+    },
+    {
+      teamA: "EEUU",
+      flagA: "/usa.jpg",
+      teamB: "Gales",
+      flagB: "/gal.webp",
+    },
+    {
+      teamA: "Argentina",
+      flagA: "/arg.jpg",
+      teamB: "A.Saudita",
+      flagB: "/ara.png",
+    },
+    {
+      teamA: "Mexico",
+      flagA: "/mex.jpg",
+      teamB: "Polonia",
+      flagB: "/pol.jpg",
+    },
+    {
+      teamA: "Dinamarca",
+      flagA: "/din.jpg",
+      teamB: "Tunez",
+      flagB: "/tun.jpg",
+    },
+    {
+      teamA: "Francia",
+      flagA: "/fra.jpg",
+      teamB: "Australia",
+      flagB: "/aus.png",
+    },
+    {
+      teamA: "Alemania",
+      flagA: "/ale.jpg",
+      teamB: "Japon",
+      flagB: "/jap.jpg",
+    },
+    {
+      teamA: "España",
+      flagA: "/esp.png",
+      teamB: "CostaRica",
+      flagB: "/cos.png",
+    },
+    {
+      teamA: "Marruecos",
+      flagA: "/mar.gif",
+      teamB: "Croacia",
+      flagB: "/cro.png",
+    },
+    {
+      teamA: "Belgica",
+      flagA: "/bel.gif",
+      teamB: "Canada",
+      flagB: "/can.png",
+    },
+    {
+      teamA: "Suiza",
+      flagA: "/sui.jpg",
+      teamB: "Camerun",
+      flagB: "/cam.png",
+    },
+    {
+      teamA: "Brasil",
+      flagA: "/bra.png",
+      teamB: "Serbia",
+      flagB: "/ser.png",
+    },
+    {
+      teamA: "Uruguay",
+      flagA: "/uru.gif",
+      teamB: "Corea",
+      flagB: "/cor.gif",
+    },
+    {
+      teamA: "Portugal",
+      flagA: "/por.jpg",
+      teamB: "Ghana",
+      flagB: "/gha.png",
+    },
+  ],
+  users: [
+    { name: "Marcelo", surname: "De Passos", points: "0" },
+    { name: "Natalia", surname: "Albornoz", points: "0" },
+    { name: "Alejandra", surname: "Quintairos", points: "0" },
+    { name: "Marcela", surname: "Gulla", points: "0" },
+    { name: "Eduardo", surname: "Avila", points: "0" },
+    { name: "Victor", surname: "Gonzalez", points: "0" },
+    { name: "Adolfo", surname: "Arrosa", points: "0" },
+    { name: "Joaquín", surname: "Valese", points: "0" },
+  ],
+  kids: [
+    { name: "Joaquin", points: "0" },
+    { name: "Jazmin", points: "0" },
+    { name: "Valentina", points: "0" },
+    { name: "Martin", points: "0" },
+    { name: "Lautaro", points: "0" },
+    { name: "Martina", points: "0" },
+    { name: "Valentino", points: "0" },
+    { name: "Agustín", points: "0" },
+  ],
+};
+
+export default data;
