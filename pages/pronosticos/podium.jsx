@@ -31,7 +31,7 @@ export default function Podium() {
             * Completa tu podio antes del 20/11/22, realiza una captura de pantalla y enviala al chat de asistencia de Tredi Argentina.
           </span>
         </div>
-        <div className="flex gap-8 mx-auto font-semibold uppercase text-3xl">
+        <div className="flex flex-col md:flex-row gap-8 mx-auto font-semibold uppercase text-3xl">
           <h3 className="text-gray-50">
             1° Puesto:{" "}
             {!first ? "?" : <span className="text-yellow-500"> {first}</span>}

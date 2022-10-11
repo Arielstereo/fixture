@@ -26,17 +26,17 @@ export default function Match1() {
           </span>
         </div>
       </div>
-      <div className="py-8 mx-4 md:mx-36 lg:mx-32">
+      <div className="ml-24 md:mx-36 lg:mx-32 mb-8">
         <Grid.Container gap={2}>
           {data.match1.map((item, index) => (
-            <Grid xs={6} md={4} lg={3} key={index}>
+            <Grid xs={8} md={4} lg={3} key={index}>
               <div className="w-60">
                 <Card
                   variant="bordered"
                   className="shadow-lg shadow-gray-800 bg-slate-100"
                 >
                   <Card.Body>
-                    <div className="py-2 px-6">
+                    <div className="p-4">
                       <Radio.Group>
                         <Radio value={item.teamA} size="md">
                           <div className="flex gap-8">

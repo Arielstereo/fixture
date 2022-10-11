@@ -17,7 +17,7 @@ export default function Positions() {
           shadow
           color="warning"
           onClick={() => setVisible(true)}
-          className="bg-yellow-300 hover:bg-transparent text-gray-800 text-lg p-6 font-semibold hover:text-white"
+          className="bg-yellow-300 hover:bg-transparent text-gray-800 text-lg p-6 font-semibold hover:text-white z-0"
         >
           Ver reglamento
         </Button>

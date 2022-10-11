@@ -69,7 +69,7 @@ export default function Layout({ children }) {
                 navbar ? "block" : "hidden"
               }`}
             >
-              <ul className="flex gap-6 items-center justify-center text-red-700 font-bold">
+              <ul className="flex flex-col md:flex-row gap-6 text-red-700 font-bold">
                 <li>
                   <Link href="/pronosticos/match1">
                     <a className="hover:text-gray-800 text-base">Fecha 1</a>
