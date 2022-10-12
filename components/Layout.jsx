@@ -15,7 +15,7 @@ export default function Layout({ children }) {
         <meta name="description" content="E-commerce" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <nav className="w-full bg-slate-50 py-2 fixed top-0 z-10 rounded-xl">
+      <nav className="w-full bg-slate-50 py-2 fixed top-0 z-10">
         <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
@@ -101,7 +101,7 @@ export default function Layout({ children }) {
         </div>
       </nav>
       <main>{children}</main>
-      <footer className="bg-blue-800 h-ful py-16">
+      <footer className="bg-blue-800 py-16">
         <div className="flex flex-col md:flex-row justify-around items-center">
           <div className="flex flex-col gap-4 items-center">
             <h4 className="text-white font-bold mb-4 rounded-3xl bg-orange-500 py-2 px-4 w-28">CONTACTO</h4>

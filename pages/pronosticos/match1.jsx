@@ -9,6 +9,7 @@ export default function Match1() {
 
   return (
     <Layout>
+      <div className="flex flex-col items-center px-10">
       <div className="flex flex-col text-center pt-32 pb-4 gap-4">
         <h1 className="text-white text-6xl font-bold">
           Resultados de <span className="uppercase text-yellow-500">{name}  {surname} </span>
@@ -26,14 +27,14 @@ export default function Match1() {
           </span>
         </div>
       </div>
-      <div className="ml-24 md:mx-36 lg:mx-32 mb-8">
+      <div className="mx-8 md:mx-36 lg:mx-32 mb-8">
         <Grid.Container gap={2}>
           {data.match1.map((item, index) => (
             <Grid xs={8} md={4} lg={3} key={index}>
               <div className="w-60">
                 <Card
                   variant="bordered"
-                  className="shadow-lg shadow-gray-800 bg-slate-100"
+                  className="shadow-lg shadow-gray-800 bg-slate-100 w-60"
                 >
                   <Card.Body>
                     <div className="p-4">
@@ -73,6 +74,7 @@ export default function Match1() {
             </Grid>
           ))}
         </Grid.Container>
+      </div>
       </div>
     </Layout>
   );

@@ -17,7 +17,7 @@ export default function Podium() {
 
   return (
     <Layout>
-      <div className="flex flex-col gap-16 text-center my-32">
+      <div className="flex flex-col gap-16 text-center my-32 px-10">
         <h1 className=" text-yellow-500 text-6xl font-bold">
           Podio de{" "}
           <span className="uppercase">
@@ -46,7 +46,7 @@ export default function Podium() {
           </h3>
         </div>
         <Grid.Container gap={6}>
-          <div className="flex flex-col mx-auto">
+          <div className="flex flex-col mx-auto z-0">
             <Grid>
               <Input
                 onChange={(e) => setFirst(e.target.value)}

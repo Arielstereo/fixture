@@ -11,7 +11,7 @@ const Kids = () => {
 
   return (
     <div className="flex flex-col items-center mt-32">
-      <div className="mb-4">
+      <div className="mb-4 mx-4">
         <Image src="/tredi.png" height="130" width="480" alt="logo" />
       </div>
       <div className="flex flex-col lg:flex-row gap-8">

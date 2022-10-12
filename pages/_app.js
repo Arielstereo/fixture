@@ -1,7 +1,6 @@
-import "../styles/globals.css";
-
 import { NextUIProvider } from "@nextui-org/react";
 import { AuthProvider } from "../utils/Store";
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   return (
