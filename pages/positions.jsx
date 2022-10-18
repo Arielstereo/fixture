@@ -33,7 +33,7 @@ export default function Positions({users}) {
             className="bg-yellow-500"
           >
             <Modal.Header>
-              <Text id="modal-title" size={25}>
+              <Text id="modal-title" size={25} className="text-white font-bold text-3xl py-4">
                 Reglamento del torneo
               </Text>
             </Modal.Header>
@@ -41,7 +41,7 @@ export default function Positions({users}) {
               <Text id="modal-description" className="font-semibold">
                 En la primera fase cada acierto vale 1 punto.<br/> A partir de
                 octavos de final cada acierto vale 3 puntos.<br/> En cuartos de final
-                5 puntos.<br/> En semifinales 8 puntos. Tercer puesto 10 puntos.
+                5 puntos.<br/> En semifinales 8 puntos.<br/> Tercer puesto 10 puntos.<br/>
                 Final 15 puntos.<br/> El resultado se toma en cuenta dentro de los 90
                 minutos de juego, no cuenta el resultado de la prórroga y/o
                 penales.<br/> Antes de iniciar el torneo cada participante deberá
@@ -53,7 +53,7 @@ export default function Positions({users}) {
               <Button
                 auto
                 flat
-                className="bg-black text-white"
+                className="bg-black text-white font-semibold"
                 onClick={() => setVisible(false)}
               >
                 Cerrar

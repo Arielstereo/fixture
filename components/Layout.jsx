@@ -20,7 +20,7 @@ export default function Layout({ children }) {
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
               <Link href="/">
-                <a className="text-3xl text-red-700 hover:text-slate-800 font-bold flex items-center gap-4">
+                <a className="text-3xl text-red-700 hover:text-sky-400 font-bold flex items-center gap-4">
                   <Image src="/recicle.png" width="50" height="50" alt="logo" />{" "}
                   Copa Tredi 2022
                 </a>
@@ -72,22 +72,22 @@ export default function Layout({ children }) {
               <ul className="flex flex-col md:flex-row gap-6 text-red-700 font-bold">
                 <li>
                   <Link href="/pronosticos/match1">
-                    <a className="hover:text-gray-800 text-base">Fecha 1</a>
+                    <a className="hover:text-sky-400 text-lg">Fecha 1</a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/positions">
-                    <a className="hover:text-gray-800 text-base">Posiciones</a>
+                    <a className="hover:text-sky-400 text-lg">Posiciones</a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/results">
-                    <a className="hover:text-gray-800 text-base">Podio</a>
+                    <a className="hover:text-sky-400 text-lg">Podio</a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/resultsMatch1">
-                    <a className="hover:text-gray-800 text-base">Pronósticos</a>
+                    <a className="hover:text-sky-400 text-lg">Pronósticos</a>
                   </Link>
                 </li>
               </ul>
