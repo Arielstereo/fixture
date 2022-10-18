@@ -13,6 +13,8 @@ export const AuthProvider = ({ children }) => {
   const [second, setSecond] = useState("");
   const [third, setThird] = useState("");
   const [kids, setKids] = useState("");
+  const [user, setUser] = useState({});
+  const [match1, setMatch1] = useState({});
 
 
   return (
@@ -29,7 +31,11 @@ export const AuthProvider = ({ children }) => {
         third,
         setThird,
         kids,
-        setKids
+        setKids,
+        user,
+        setUser,
+        match1,
+        setMatch1
 
       }}
     >
