@@ -69,8 +69,8 @@ export default function Match1() {
       <div className="flex flex-col items-center px-10">
         <div className="flex flex-col text-center pt-32 pb-4 gap-4">
           <div className="flex flex-col gap-4">
-            <h3 className="text-sky-400 font-bold font-mono text-6xl">
-              Fecha 1
+            <h3 className="text-sky-400 font-bold text-6xl">
+             Fase de grupos - Fecha 1
             </h3>
             <span className="text-yellow-500 text-lg font-semibold">
               * Completa todos los resultados antes del 20/11/22. En esta fase

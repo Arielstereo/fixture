@@ -54,7 +54,7 @@ export default function Home() {
           <h1 className="text-6xl text-sky-400 font-bold animate__animated animate__backInLeft">
             Copa Tredi Argentina
           </h1>
-          <h2 className="text-4xl text-sky-400 font-bold animate__animated animate__backInRight">
+          <h2 className="text-4xl text-slate-50 font-bold animate__animated animate__backInRight">
             Mundial Qatar 2022
           </h2>
         </div>

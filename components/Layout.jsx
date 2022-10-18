@@ -72,7 +72,7 @@ export default function Layout({ children }) {
               <ul className="flex flex-col md:flex-row gap-6 text-red-700 font-bold">
                 <li>
                   <Link href="/pronosticos/match1">
-                    <a className="hover:text-sky-400 text-lg">Fecha 1</a>
+                    <a className="hover:text-sky-400 text-lg">Grupos</a>
                   </Link>
                 </li>
                 <li>
