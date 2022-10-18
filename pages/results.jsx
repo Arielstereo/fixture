@@ -10,7 +10,7 @@ const Results = ({ users }) => {
         <h1 className="text-sky-400 text-4xl md:text-6xl text-center font-bold mb-32">
           Pronósticos - Podio
         </h1>
-        <div className="flex flex-col md:flex-row mx-48 md:mx-32 gap-6">
+        <div className="flex flex-col md:flex-row mx-16 md:mx-32 gap-6">
           {users.map((user) => (
             <Table aria-label="table" key={user._id} className="w-full z-0">
               <Table.Header>
