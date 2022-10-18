@@ -6,53 +6,39 @@ import { Table } from "@nextui-org/react";
 const Results = ({ users }) => {
   return (
     <Layout>
-      <div className="my-32 m-4">
-        <h1 className="text-sky-400 text-6xl text-center font-bold mb-32">
+      <div className="my-48">
+        <h1 className="text-sky-400 text-4xl md:text-6xl text-center font-bold mb-32">
           Pronósticos - Podio
         </h1>
-        <div className="mx-4 md:mx-72 w-[500px] lg:w-[1000px]">
-          <Table aria-label="table" className="w-full z-0">
-            <Table.Header>
-              <Table.Column>
-                <span className="text-gray-800 md:text-sm">NOMBRE</span>{" "}
-              </Table.Column>
-              <Table.Column>
-                <span className="text-gray-800 md:text-sm">CAMPEON</span>
-              </Table.Column>
-              <Table.Column>
-                <span className="text-gray-800 md:text-sm">SUBCAMPEON</span>
-              </Table.Column>
-              <Table.Column>
-                <span className="text-gray-800 md:text-sm">TERCERO</span>
-              </Table.Column>
-            </Table.Header>
-            <Table.Body>
-              {users.map((user) => (
-                <Table.Row key={user._id}>
+        <div className="flex flex-col md:flex-row mx-48 md:mx-32 gap-6">
+          {users.map((user) => (
+            <Table aria-label="table" key={user._id} className="w-full z-0">
+              <Table.Header>
+                <Table.Column>
+                  <span className="text-gray-800 md:text-lg uppercase">
+                    {user.name + " " + user.surname}
+                  </span>{" "}
+                </Table.Column>
+              </Table.Header>
+              <Table.Body>
+                <Table.Row>
                   <Table.Cell>
-                    <span className="text-sky-400 uppercase md:text-3xl font-semibold">
-                      {user.name + ' ' + user.surname}
-                    </span>
-                  </Table.Cell>
-                  <Table.Cell>
-                    <span className="text-yellow-400 uppercase md:text-3xl font-semibold">
-                      {user.first}
-                    </span>
-                  </Table.Cell>
-                  <Table.Cell>
-                    <span className="text-yellow-400 uppercase md:text-3xl font-semibold">
-                      {user.second}
-                    </span>
-                  </Table.Cell>
-                  <Table.Cell>
-                    <span className="text-yellow-400 uppercase md:text-3xl font-semibold">
-                      {user.third}
-                    </span>
+                    <div className="flex flex-col">
+                      <span className="text-yellow-400 uppercase md:text-2xl font-semibold">
+                        1° {user.first}
+                      </span>
+                      <span className="text-yellow-400 uppercase md:text-2xl font-semibold">
+                        2° {user.second}
+                      </span>
+                      <span className="text-yellow-400 uppercase md:text-2xl font-semibold">
+                        3° {user.third}
+                      </span>
+                    </div>
                   </Table.Cell>
                 </Table.Row>
-              ))}
-            </Table.Body>
-          </Table>
+              </Table.Body>
+            </Table>
+          ))}
         </div>
       </div>
     </Layout>

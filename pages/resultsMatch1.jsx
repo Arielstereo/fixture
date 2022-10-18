@@ -6,10 +6,10 @@ import { Collapse, Text, Grid, Badge } from "@nextui-org/react";
 const ResultMatch1 = ({ results }) => {
   return (
     <Layout>
-      <h1 className="text-sky-400 text-6xl text-center font-bold my-32">
+      <h1 className="text-sky-400 text-3xl md:text-6xl text-center font-bold mt-32 mb-16">
         Pronósticos - Fecha 1
       </h1>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap mx-auto my-32">
         <Grid.Container gap={2} className="mb-64">
           {results.map((item) => (
             <Grid key={item._id}>

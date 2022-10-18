@@ -49,16 +49,16 @@ export default function Home() {
 
   return (
     <Layout>
-      <div className="flex flex-col items-center mt-32">
+      <div className="flex flex-col items-center mt-48">
         <div className="flex flex-col gap-4 text-center">
           <h1 className="text-6xl text-sky-400 font-bold animate__animated animate__backInLeft">
             Copa Tredi Argentina
           </h1>
-          <h2 className="text-4xl text-slate-50 font-bold animate__animated animate__backInRight">
+          <h2 className="text-5xl text-slate-50 font-bold animate__animated animate__backInRight">
             Mundial Qatar 2022
           </h2>
         </div>
-        <div className="flex flex-col lg:flex-row gap-8">
+        <div className="flex flex-col lg:flex-row gap-8 items-center lg:ml-16">
           <div className="mt-8 mx-auto">
             <Image src="/logo.png" width="300" height="300" alt="logo" />
           </div>

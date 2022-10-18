@@ -63,9 +63,9 @@ export default function Positions({users}) {
         </div>
         <div className="divide-y-2">
           <div className="flex flex-col lg:flex-row lg:gap-16 justify-center items-center my-4">
-            <div className="w-[500px] md:w-[600px] rounded-3xl">
+            <div className="w-[380px] md:w-[600px] rounded-3xl">
               <div>
-                <h1 className="flex items-center  justify-center text-yellow-400 text-4xl text-center py-2 font-bold">
+                <h1 className="flex items-center justify-center text-yellow-400 text-2xl md:text-4xl text-center py-2 font-bold">
                   Torneo Tredi Argentina{" "}
                   <Image
                     src="/trofeo.png"
@@ -75,25 +75,25 @@ export default function Positions({users}) {
                   />
                 </h1>
               </div>
-              <Table aria-label="table" className="w-full h-96 z-0">
+              <Table aria-label="table" className="w-full h-full z-0">
                 <Table.Header>
                   <Table.Column>
-                    <span className="text-gray-800 text-sm">NOMBRE</span>
+                    <span className="text-gray-800 text-xs md:text-lg">NOMBRE</span>
                   </Table.Column>
                   <Table.Column>
-                    <span className="text-gray-800 text-sm">PUNTOS</span>
+                    <span className="text-gray-800 text-xs md:text-lg">PUNTOS</span>
                   </Table.Column>
                 </Table.Header>
                 <Table.Body>
                   {users.map((user) => (
                     <Table.Row key={user._id}>
                       <Table.Cell>
-                        <span className="text-sky-400 text-3xl font-semibold uppercase">
+                        <span className="text-sky-400 text-xl md:text-2xl font-semibold uppercase">
                           {user.name + " " + user.surname}
                         </span>
                       </Table.Cell>
                       <Table.Cell>
-                        <span className="text-yellow-400 text-3xl font-semibold">
+                        <span className="text-yellow-400 text-xl md:text-2xl font-semibold">
                           0
                         </span>
                       </Table.Cell>

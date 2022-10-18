@@ -69,8 +69,8 @@ export default function Match1() {
       <div className="flex flex-col items-center px-10">
         <div className="flex flex-col text-center pt-32 pb-4 gap-4">
           <div className="flex flex-col gap-4">
-            <h3 className="text-sky-400 font-bold text-6xl">
-             Fase de grupos - Fecha 1
+            <h3 className="text-sky-400 font-bold text-4xl md:text-6xl py-4">
+              Fase de grupos - Fecha 1
             </h3>
             <span className="text-yellow-500 text-lg font-semibold">
               * Completa todos los resultados antes del 20/11/22. En esta fase
@@ -80,28 +80,28 @@ export default function Match1() {
         </div>
         <div className="mx-8 md:mx-36 lg:mx-32 mb-8">
           <form onSubmit={handleSubmit} className="flex flex-col items-center">
-          <div className="flex gap-8">
-          <Input
-              rounded
-              bordered
-              size="xl"
-              label="Nombre"
-              placeholder="Ingresa tu nombre"
-              color="warning"
-              className="bg-white"
-              onChange={(e) => setName(e.target.value)}
-            />
-            <Input
-              rounded
-              bordered
-              size="xl"
-              label="Apellido"
-              placeholder="Ingresa tu apellido"
-              color="warning"
-              className="bg-white"
-              onChange={(e) => setSurname(e.target.value)}
-            />
-          </div>
+            <div className="flex gap-8">
+              <Input
+                rounded
+                bordered
+                size="xl"
+                label="Nombre"
+                placeholder="Ingresa tu nombre"
+                color="warning"
+                className="bg-white"
+                onChange={(e) => setName(e.target.value)}
+              />
+              <Input
+                rounded
+                bordered
+                size="xl"
+                label="Apellido"
+                placeholder="Ingresa tu apellido"
+                color="warning"
+                className="bg-white"
+                onChange={(e) => setSurname(e.target.value)}
+              />
+            </div>
             <div className="flex flex-wrap justify-center gap-2 mt-4">
               <div className="mx-4">
                 <Card
