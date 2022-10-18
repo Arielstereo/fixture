@@ -4,6 +4,8 @@ import { useAuth } from "../utils/Store";
 import { useRouter } from "next/router";
 import "animate.css";
 import Layout from "../components/Layout";
+import { ImSpinner3 } from "react-icons/im";
+import { useState } from "react";
 
 export default function Home() {
   const {
@@ -19,6 +21,8 @@ export default function Home() {
     setThird,
     setUser,
   } = useAuth();
+
+  const [isSubmit, setIsSubmit] = useState(false);
 
   const router = useRouter();
 
@@ -44,6 +48,7 @@ export default function Home() {
       third,
     };
     const userSaved = await data(newUser);
+    setIsSubmit(true);
     setUser(userSaved);
   };
 
@@ -63,8 +68,13 @@ export default function Home() {
             <Image src="/logo.png" width="300" height="300" alt="logo" />
           </div>
           <div className="mt-16 mb-8 mx-8">
-          <span className="text-yellow-400 font-semibold">* Ingresa tus datos y elige tu podio antes del 20/11.</span>
-            <form onSubmit={handleSubmit} className="flex flex-col gap-2 mt-4 mb-8">
+            <span className="text-yellow-400 font-semibold">
+              * Ingresa tus datos y elige tu podio antes del 20/11.
+            </span>
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col gap-2 mt-4 mb-8"
+            >
               <Input
                 rounded
                 bordered
@@ -115,11 +125,20 @@ export default function Home() {
                 className="bg-white"
                 onChange={(e) => setThird(e.target.value)}
               />
-              <button className="text-gray-800 font-semibold bg-yellow-400 hover:bg-transparent hover:text-white border-2 border-white py-2 px-16 rounded-lg mx-12 mt-4">
-                Ingresar
+              <button
+                disabled={isSubmit}
+                className="text-gray-800 font-semibold bg-yellow-400 hover:bg-transparent hover:text-white border-2 border-white py-2 px-16 rounded-lg mx-12 mt-4"
+              >
+                {isSubmit ? (
+                  <div className="flex gap-6">
+                    <ImSpinner3 className="h-6 w-6 animate-spin" />
+                    <span>Cargando...</span>
+                  </div>
+                ) : (
+                  "Enviar"
+                )}
               </button>
             </form>
-           
           </div>
           <div>
             <Image src="/skipper.png" width="380" height="380" alt="skipper" />
