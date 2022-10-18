@@ -6,17 +6,18 @@ import { Collapse, Text, Grid, Badge } from "@nextui-org/react";
 const ResultMatch1 = ({ results }) => {
   return (
     <Layout>
-      <h1 className="text-sky-400 text-3xl md:text-6xl text-center font-bold mt-32 mb-16">
+   <div className="p-8">
+   <h1 className="text-sky-400 text-3xl md:text-6xl text-center font-bold mt-32 mb-16">
         Pronósticos - Fecha 1
       </h1>
-      <div className="flex flex-wrap mx-auto my-32">
+      <div className="flex flex-wrap my-32">
         <Grid.Container gap={2} className="mb-64">
           {results.map((item) => (
             <Grid key={item._id}>
               <Collapse.Group splitted>
                 <Collapse
                   title={item.name + " " + item.surname}
-                  className="uppercase text-xl font-bold w-96"
+                  className="uppercase text-xl font-bold w-64 md:w-96"
                 >
                   <Text className="flex flex-col gap-4">
                     <div className="flex justify-around">
@@ -203,6 +204,7 @@ const ResultMatch1 = ({ results }) => {
           ))}
         </Grid.Container>
       </div>
+   </div>
     </Layout>
   );
 };
