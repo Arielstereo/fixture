@@ -6,7 +6,7 @@ import { Table } from "@nextui-org/react";
 const Results = ({ users }) => {
   return (
     <Layout>
-      <div className="my-48">
+      <div className="m-32">
         <h1 className="text-sky-400 text-4xl md:text-6xl text-center font-bold mb-32">
           Pronósticos - Podio
         </h1>

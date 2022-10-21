@@ -5,6 +5,7 @@ import { useState } from "react";
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { TbWorld } from "react-icons/tb";
+import { Dropdown } from "@nextui-org/react";
 
 export default function Layout({ children }) {
   const [navbar, setNavbar] = useState(false);
@@ -71,11 +72,6 @@ export default function Layout({ children }) {
             >
               <ul className="flex flex-col md:flex-row gap-6 text-red-700 font-bold">
                 <li>
-                  <Link href="/pronosticos/match1">
-                    <a className="hover:text-sky-400 text-lg">Grupos</a>
-                  </Link>
-                </li>
-                <li>
                   <Link href="/positions">
                     <a className="hover:text-sky-400 text-lg">Posiciones</a>
                   </Link>
@@ -90,6 +86,33 @@ export default function Layout({ children }) {
                     <a className="hover:text-sky-400 text-lg">Pronósticos</a>
                   </Link>
                 </li>
+                <li>
+                  <Dropdown>
+                    <Dropdown.Button
+                      flat
+                      className="text-red-700 font-bold text-xl pb-3"
+                    >
+                      Fase de Grupos
+                    </Dropdown.Button>
+                    <Dropdown.Menu aria-label="Static Actions" className="bg-sky-300">
+                      <Dropdown.Item>
+                        <Link href="/pronosticos/match1">
+                          <a className="text-lg font-semibold px-16">Fecha1</a>
+                        </Link>
+                      </Dropdown.Item>
+                      <Dropdown.Item>
+                        <Link href="/pronosticos/match2">
+                          <a className="text-lg font-semibold px-16">Fecha2</a>
+                        </Link>
+                      </Dropdown.Item>
+                      <Dropdown.Item>
+                        <Link href="/pronosticos/match3">
+                          <a className="text-lg font-semibold px-16">Fecha3</a>
+                        </Link>
+                      </Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
+                </li>
               </ul>
             </div>
           </div>
@@ -99,7 +122,9 @@ export default function Layout({ children }) {
       <footer className="bg-blue-800 py-16">
         <div className="flex flex-col md:flex-row justify-around items-center">
           <div className="flex flex-col gap-4 items-center">
-            <h4 className="text-white font-bold mb-4 rounded-3xl bg-orange-500 py-2 px-4 w-28">CONTACTO</h4>
+            <h4 className="text-white font-bold mb-4 rounded-3xl bg-orange-500 py-2 px-4 w-28">
+              CONTACTO
+            </h4>
             <ul className="text-white">
               <li className="flex items-center gap-4">
                 <IoIosMail className="w-8 h-8" />
@@ -120,10 +145,18 @@ export default function Layout({ children }) {
             </ul>
           </div>
           <div>
-            <Image src="/tredi.png" width="300" height="100" alt="logo" className="invisible md:visible" />
+            <Image
+              src="/tredi.png"
+              width="300"
+              height="100"
+              alt="logo"
+              className="invisible md:visible"
+            />
           </div>
           <div className="flex flex-col gap-4">
-            <h4 className="text-white font-bold mb-4 rounded-3xl bg-orange-500 py-2 px-4 w-40">REDES SOCIALES</h4>
+            <h4 className="text-white font-bold mb-4 rounded-3xl bg-orange-500 py-2 px-4 w-40">
+              REDES SOCIALES
+            </h4>
             <ul className="flex gap-8 text-white">
               <li>
                 <a
@@ -135,10 +168,22 @@ export default function Layout({ children }) {
                 </a>
               </li>
               <li>
-                <a href="https://twitter.com/secheenvironnem" target="_blank" rel="noreferrer"><FaTwitter className="w-6 h-6" /></a>
+                <a
+                  href="https://twitter.com/secheenvironnem"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaTwitter className="w-6 h-6" />
+                </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/company/seche-environnement" target="_blank" rel="noreferrer"><FaLinkedinIn className="w-6 h-6" /></a>
+                <a
+                  href="https://www.linkedin.com/company/seche-environnement"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaLinkedinIn className="w-6 h-6" />
+                </a>
               </li>
             </ul>
           </div>

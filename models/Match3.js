@@ -1,6 +1,6 @@
 import {Schema, model, models} from "mongoose";
 
-const ResultMatch1Schema = new Schema({
+const ResultMatch3Schema = new Schema({
   name: {
     type: "string",
     unique: true,
@@ -59,5 +59,5 @@ const ResultMatch1Schema = new Schema({
   },
 });
 
-export default models.Match1 || model("Match1", ResultMatch1Schema);
+export default models.Match3 || model("Match3", ResultMatch3Schema);
 

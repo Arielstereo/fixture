@@ -7,8 +7,8 @@ import { useRouter } from "next/router";
 import axios from "axios";
 import { ImSpinner3 } from "react-icons/im";
 
-export default function Match1() {
-  const { name, surname, setSurname, setName, setMatch1 } = useAuth();
+export default function Match3() {
+  const { name, surname, setSurname, setName, setMatch3 } = useAuth();
   const [checked, setChecked] = useState("");
   const [checked2, setChecked2] = useState("");
   const [checked3, setChecked3] = useState("");
@@ -33,7 +33,7 @@ export default function Match1() {
 
   const data = async (result) => {
     try {
-      const res = await axios.post("/api/match1", {
+      const res = await axios.post("/api/match3", {
         result,
       });
       console.log(res);
@@ -88,8 +88,8 @@ export default function Match1() {
     } else {
       const resultSaved = await data(result);
       setIsSubmit(true);
-      setMatch1(resultSaved);
-      router.push("/resultsMatch1");
+      setMatch3(resultSaved);
+      router.push("/positions");
     }
   };
 
@@ -99,10 +99,10 @@ export default function Match1() {
         <div className="flex flex-col text-center pt-32 pb-4 gap-4">
           <div className="flex flex-col gap-4">
             <h3 className="text-sky-400 font-bold text-4xl md:text-6xl py-4">
-              Fase de grupos - Fecha 1
+              Fase de grupos - Fecha 3
             </h3>
             <span className="text-yellow-500 text-lg font-semibold">
-              * Completa todos los resultados antes del 11/11. En esta fase cada
+              * Completa todos los resultados antes del 29/11. En esta fase cada
               acierto vale 1 punto!
             </span>
           </div>
@@ -160,11 +160,11 @@ export default function Match1() {
                         <Radio value="Empate" size="md">
                           <span className="text-base">Empate</span>
                         </Radio>
-                        <Radio value="Holanda" size="md">
+                        <Radio value="Ecuador" size="md">
                           <div className="flex gap-8">
-                            <span className="text-base">Holanda</span>
+                            <span className="text-base">Ecuador</span>
                             <Image
-                              src="/hol.png"
+                              src="/ecu.jpg"
                               width="35"
                               height="25"
                               alt=""
@@ -205,11 +205,11 @@ export default function Match1() {
                         <Radio value="Empate" size="md">
                           <span className="text-base">Empate</span>
                         </Radio>
-                        <Radio value="Ecuador" size="md">
+                        <Radio value="Holanda" size="md">
                           <div className="flex gap-8">
-                            <span className="text-base">Ecuador</span>
+                            <span className="text-base">Holanda</span>
                             <Image
-                              src="/ecu.jpg"
+                              src="/hol.png"
                               width="35"
                               height="25"
                               alt=""
@@ -250,11 +250,11 @@ export default function Match1() {
                         <Radio value="Empate" size="md">
                           <span className="text-base">Empate</span>
                         </Radio>
-                        <Radio value="Iran" size="md">
+                        <Radio value="Gales" size="md">
                           <div className="flex gap-8">
-                            <span className="text-base">Iran</span>
+                            <span className="text-base">Gales</span>
                             <Image
-                              src="/ira.gif"
+                              src="/gal.webp"
                               width="35"
                               height="25"
                               alt=""
@@ -295,11 +295,11 @@ export default function Match1() {
                         <Radio value="Empate" size="md">
                           <span className="text-base">Empate</span>
                         </Radio>
-                        <Radio value="Gales" size="md">
+                        <Radio value="Iran" size="md">
                           <div className="flex gap-8">
-                            <span className="text-base">Gales</span>
+                            <span className="text-base">Iran</span>
                             <Image
-                              src="/gal.webp"
+                              src="/ira.gif"
                               width="35"
                               height="25"
                               alt=""
@@ -340,11 +340,11 @@ export default function Match1() {
                         <Radio value="Empate" size="md">
                           <span className="text-base">Empate</span>
                         </Radio>
-                        <Radio value="A.Saudita" size="md">
+                        <Radio value="Polonia" size="md">
                           <div className="flex gap-8">
-                            <span className="text-base">A.Saudita</span>
+                            <span className="text-base">Polonia</span>
                             <Image
-                              src="/ara.png"
+                              src="/pol.jpg"
                               width="35"
                               height="25"
                               alt=""
@@ -385,11 +385,11 @@ export default function Match1() {
                         <Radio value="Empate" size="md">
                           <span className="text-base">Empate</span>
                         </Radio>
-                        <Radio value="Polonia" size="md">
+                        <Radio value="A.Saudita" size="md">
                           <div className="flex gap-8">
-                            <span className="text-base">Polonia</span>
+                            <span className="text-base">A.Saudita</span>
                             <Image
-                              src="/pol.jpg"
+                              src="/ara.png"
                               width="35"
                               height="25"
                               alt=""
@@ -430,11 +430,11 @@ export default function Match1() {
                         <Radio value="Empate" size="md">
                           <span className="text-base">Empate</span>
                         </Radio>
-                        <Radio value="Tunez" size="md">
+                        <Radio value="Australia" size="md">
                           <div className="flex gap-8">
-                            <span className="text-base">Tunez</span>
+                            <span className="text-base">Australia</span>
                             <Image
-                              src="/tun.jpg"
+                              src="/aus.png"
                               width="35"
                               height="25"
                               alt=""
@@ -475,11 +475,11 @@ export default function Match1() {
                         <Radio value="Empate" size="md">
                           <span className="text-base">Empate</span>
                         </Radio>
-                        <Radio value="Australia" size="md">
+                        <Radio value="Tunez" size="md">
                           <div className="flex gap-8">
-                            <span className="text-base">Australia</span>
+                            <span className="text-base">Tunez</span>
                             <Image
-                              src="/aus.png"
+                              src="/tun.jpg"
                               width="35"
                               height="25"
                               alt=""
@@ -520,11 +520,11 @@ export default function Match1() {
                         <Radio value="Empate" size="md">
                           <span className="text-base">Empate</span>
                         </Radio>
-                        <Radio value="Japon" size="md">
+                        <Radio value="CostaRica" size="md">
                           <div className="flex gap-8">
-                            <span className="text-base">Japon</span>
+                            <span className="text-base">CostaRica</span>
                             <Image
-                              src="/jap.jpg"
+                              src="/cos.png"
                               width="35"
                               height="25"
                               alt=""
@@ -565,11 +565,11 @@ export default function Match1() {
                         <Radio value="Empate" size="md">
                           <span className="text-base">Empate</span>
                         </Radio>
-                        <Radio value="CostaRica" size="md">
+                        <Radio value="Japon" size="md">
                           <div className="flex gap-8">
-                            <span className="text-base">CostaRica</span>
+                            <span className="text-base">Japon</span>
                             <Image
-                              src="/cos.png"
+                              src="/jap.jpg"
                               width="35"
                               height="25"
                               alt=""
@@ -610,11 +610,11 @@ export default function Match1() {
                         <Radio value="Empate" size="md">
                           <span className="text-base">Empate</span>
                         </Radio>
-                        <Radio value="Croacia" size="md">
+                        <Radio value="Canada" size="md">
                           <div className="flex gap-8">
-                            <span className="text-base">Croacia</span>
+                            <span className="text-base">Canada</span>
                             <Image
-                              src="/cro.png"
+                              src="/can.png"
                               width="35"
                               height="25"
                               alt=""
@@ -655,11 +655,11 @@ export default function Match1() {
                         <Radio value="Empate" size="md">
                           <span className="text-base">Empate</span>
                         </Radio>
-                        <Radio value="Canada" size="md">
+                        <Radio value="Croacia" size="md">
                           <div className="flex gap-8">
-                            <span className="text-base">Canada</span>
+                            <span className="text-base">Croacia</span>
                             <Image
-                              src="/can.png"
+                              src="/cro.png"
                               width="35"
                               height="25"
                               alt=""
@@ -700,11 +700,11 @@ export default function Match1() {
                         <Radio value="Empate" size="md">
                           <span className="text-base">Empate</span>
                         </Radio>
-                        <Radio value="Camerun" size="md">
+                        <Radio value="Serbia" size="md">
                           <div className="flex gap-8">
-                            <span className="text-base">Camerun</span>
+                            <span className="text-base">Serbia</span>
                             <Image
-                              src="/cam.png"
+                              src="/ser.png"
                               width="35"
                               height="25"
                               alt=""
@@ -742,14 +742,14 @@ export default function Match1() {
                             />
                           </div>
                         </Radio>
-                        <Radio value="Empate" size="md">
+                        <Radio value="Camerun" size="md">
                           <span className="text-base">Empate</span>
                         </Radio>
                         <Radio value="Serbia" size="md">
                           <div className="flex gap-8">
-                            <span className="text-base">Serbia</span>
+                            <span className="text-base">Camerun</span>
                             <Image
-                              src="/ser.png"
+                              src="/cam.png"
                               width="35"
                               height="25"
                               alt=""
@@ -790,11 +790,11 @@ export default function Match1() {
                         <Radio value="Empate" size="md">
                           <span className="text-base">Empate</span>
                         </Radio>
-                        <Radio value="Corea" size="md">
+                        <Radio value="Ghana" size="md">
                           <div className="flex gap-8">
-                            <span className="text-base">Corea</span>
+                            <span className="text-base">Ghana</span>
                             <Image
-                              src="/cor.gif"
+                              src="/gha.png"
                               width="35"
                               height="25"
                               alt=""
@@ -835,11 +835,11 @@ export default function Match1() {
                         <Radio value="Empate" size="md">
                           <span className="text-base">Empate</span>
                         </Radio>
-                        <Radio value="Ghana" size="md">
+                        <Radio value="Corea" size="md">
                           <div className="flex gap-8">
-                            <span className="text-base">Ghana</span>
+                            <span className="text-base">Corea</span>
                             <Image
-                              src="/gha.png"
+                              src="/cor.gif"
                               width="35"
                               height="25"
                               alt=""

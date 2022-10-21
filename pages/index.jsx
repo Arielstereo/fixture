@@ -6,6 +6,7 @@ import "animate.css";
 import Layout from "../components/Layout";
 import { ImSpinner3 } from "react-icons/im";
 import { useState } from "react";
+import axios from "axios";
 
 export default function Home() {
   const {
@@ -23,19 +24,20 @@ export default function Home() {
   } = useAuth();
 
   const [isSubmit, setIsSubmit] = useState(false);
+  const [message, setMessage] = useState("");
+
 
   const router = useRouter();
 
   const data = async (user) => {
-    const res = await fetch("/api/user", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(user),
-    });
-    console.log(res);
-    router.push("/results");
+    try {
+      const res = await axios.post("/api/user", {
+        user,
+      });
+      console.log(res);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -47,15 +49,20 @@ export default function Home() {
       second,
       third,
     };
-    const userSaved = await data(newUser);
-    setIsSubmit(true);
-    setUser(userSaved);
+    if (!name || !surname || !first || !second || !third) {
+      setMessage("* Todos los campos son obligatorios!");
+    } else {
+      const userSaved = await data(newUser);
+      setIsSubmit(true);
+      setUser(userSaved);
+      router.push("/pronosticos/match1");
+    }
   };
 
   return (
     <Layout>
-      <div className="flex flex-col items-center mt-48">
-        <div className="flex flex-col gap-4 text-center">
+      <div className="flex flex-col items-center">
+        <div className="flex flex-col gap-4 text-center mt-32">
           <h1 className="text-6xl text-sky-400 font-bold animate__animated animate__backInLeft">
             Copa Tredi Argentina
           </h1>
@@ -69,7 +76,7 @@ export default function Home() {
           </div>
           <div className="mt-16 mb-8 mx-8">
             <span className="text-yellow-400 font-semibold">
-              * Ingresa tus datos y elige tu podio antes del 20/11.
+              * Ingresa tus datos y elige tu podio antes del 11/11.
             </span>
             <form
               onSubmit={handleSubmit}
@@ -125,6 +132,7 @@ export default function Home() {
                 className="bg-white"
                 onChange={(e) => setThird(e.target.value)}
               />
+              {message && <span className="text-yellow-500 font-semibold text-center">{message}</span> }
               <button
                 disabled={isSubmit}
                 className="text-gray-800 font-semibold bg-yellow-400 hover:bg-transparent hover:text-white border-2 border-white py-2 px-16 rounded-lg mx-12 mt-4"
