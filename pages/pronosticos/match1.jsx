@@ -4,7 +4,6 @@ import Image from "next/image";
 import Layout from "../../components/Layout";
 import { useState } from "react";
 import { useRouter } from "next/router";
-import axios from "axios";
 import { ImSpinner3 } from "react-icons/im";
 
 export default function Match1() {
@@ -33,14 +32,20 @@ export default function Match1() {
 
   const data = async (result) => {
     try {
-      const res = await axios.post("/api/match1", {
-        result,
+      const res = await fetch("/api/match1", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(result),
       });
       console.log(res);
+      router.push("/pronosticos/match1");
     } catch (error) {
       console.log(error);
     }
   };
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();

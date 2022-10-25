@@ -7,10 +7,10 @@ export default async function handler(req,res) {
 
   if (method === 'POST') {
     try {
-      const result = await new Match1(req.body);
+      const result = await Match1.create(req.body);
       res.status(200).json(result);
     } catch (error) {
-      res.status(400);
+      res.status(400).json(error);
     }
   }
 }

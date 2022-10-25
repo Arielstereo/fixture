@@ -6,14 +6,18 @@ import "animate.css";
 import Layout from "../components/Layout";
 import { ImSpinner3 } from "react-icons/im";
 import { useState } from "react";
-import axios from "axios";
+import Users from "../models/Users";
+import dbConnection from "../utils/database";
+import Select from "react-select";
 
-export default function Home() {
+export default function Home({ users }) {
   const {
     name,
     setName,
     surname,
     setSurname,
+    password,
+    setPassword,
     first,
     setFirst,
     second,
@@ -25,16 +29,56 @@ export default function Home() {
 
   const [isSubmit, setIsSubmit] = useState(false);
   const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
 
+  const options = [
+    { value: "Senegal", label: "Senegal" },
+    { value: "Holanda", label: "Holanda" },
+    { value: "Qatar", label: "Qatar" },
+    { value: "Ecuador", label: "Ecuador" },
+    { value: "Inglaterra", label: "Inglaterra" },
+    { value: "Iran", label: "Iran" },
+    { value: "EEUU", label: "EEUU" },
+    { value: "Gales", label: "Gales" },
+    { value: "Argentina", label: "Argentina" },
+    { value: "A.Saudita", label: "A.Saudita" },
+    { value: "Mexico", label: "Mexico" },
+    { value: "Polonia", label: "Polonia" },
+    { value: "Dinamarca", label: "Dinamarca" },
+    { value: "Tunez", label: "Tunez" },
+    { value: "Francia", label: "Francia" },
+    { value: "Australia", label: "Australia" },
+    { value: "Alemania", label: "Alemania" },
+    { value: "Japon", label: "Japon" },
+    { value: "España", label: "España" },
+    { value: "CostaRica", label: "CostaRica" },
+    { value: "Marruecos", label: "Marruecos" },
+    { value: "Croacia", label: "Croacia" },
+    { value: "Belgica", label: "Belgica" },
+    { value: "Canada", label: "Canada" },
+    { value: "Suiza", label: "Suiza" },
+    { value: "Camerun", label: "Camerun" },
+    { value: "Brasil", label: "Brasil" },
+    { value: "Serbia", label: "Serbia" },
+    { value: "Uruguay", label: "Uruguay" },
+    { value: "Corea", label: "Corea" },
+    { value: "Portugal", label: "Portugal" },
+    { value: "Ghana", label: "Ghana" },
+  ];
 
   const router = useRouter();
 
   const data = async (user) => {
     try {
-      const res = await axios.post("/api/user", {
-        user,
+      const res = await fetch("/api/user", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(user),
       });
       console.log(res);
+      router.push("/results");
     } catch (error) {
       console.log(error);
     }
@@ -45,17 +89,23 @@ export default function Home() {
     const newUser = {
       name,
       surname,
+      password,
       first,
       second,
       third,
     };
-    if (!name || !surname || !first || !second || !third) {
-      setMessage("* Todos los campos son obligatorios!");
+    const duplicate = users.find((user) => toString(user.password) === toString(newUser.password));
+    console.log(newUser);
+
+    if (!name || !surname || !password || !first || !second || !third) {
+      setError("* Todos los campos son obligatorios!");
+    }
+    if (password && duplicate) {
+      setMessage("* El usuario ya existe!");
     } else {
       const userSaved = await data(newUser);
       setIsSubmit(true);
       setUser(userSaved);
-      router.push("/pronosticos/match1");
     }
   };
 
@@ -74,65 +124,73 @@ export default function Home() {
           <div className="mt-8 mx-auto">
             <Image src="/logo.png" width="300" height="300" alt="logo" />
           </div>
-          <div className="mt-16 mb-8 mx-8">
+          <div className="flex flex-col items-center mt-16 mb-8 mx-8 ">
             <span className="text-yellow-400 font-semibold">
               * Ingresa tus datos y elige tu podio antes del 11/11.
             </span>
             <form
               onSubmit={handleSubmit}
-              className="flex flex-col gap-2 mt-4 mb-8"
+              className="flex flex-col items-center gap-4 mt-4 mb-8"
             >
               <Input
                 rounded
                 bordered
-                size="xl"
+                size="lg"
                 label="Nombre"
                 placeholder="Ingrese su nombre"
                 color="warning"
-                className="bg-white"
+                className="bg-white w-96"
                 onChange={(e) => setName(e.target.value)}
               />
               <Input
                 rounded
                 bordered
-                size="xl"
+                size="lg"
                 label="Apellido"
                 placeholder="Ingrese su apellido"
                 color="warning"
-                className="bg-white"
+                className="bg-white w-96"
                 onChange={(e) => setSurname(e.target.value)}
               />
+
               <Input
                 rounded
                 bordered
-                size="xl"
-                label="Campeón"
-                placeholder="Campeón"
+                size="lg"
+                label="Contraseña (DNI)"
+                placeholder="Ingrese su DNI"
                 color="warning"
-                className="bg-white"
-                onChange={(e) => setFirst(e.target.value)}
+                className="bg-white w-96"
+                type="password"
+                onChange={(e) => setPassword(e.target.value)}
               />
-              <Input
-                rounded
-                bordered
-                size="xl"
-                label="Subcampeón"
-                placeholder="SubCampeón"
-                color="warning"
-                className="bg-white"
-                onChange={(e) => setSecond(e.target.value)}
-              />
-              <Input
-                rounded
-                bordered
-                size="xl"
-                label="Tercero"
-                placeholder="Tercero"
-                color="warning"
-                className="bg-white"
-                onChange={(e) => setThird(e.target.value)}
-              />
-              {message && <span className="text-yellow-500 font-semibold text-center">{message}</span> }
+              {message && (
+                <span className="text-yellow-500 font-semibold text-center">
+                  {message}
+                </span>
+              )}
+              <div className="flex flex-col md:flex-row mt-4 gap-4">
+                <Select
+                  defaultValue={{ value: "", label: "Campeón" }}
+                  options={options}
+                  onChange={(e) => setFirst(e.value)}
+                />
+                <Select
+                  defaultValue={{ value: "", label: "Subcampeón" }}
+                  options={options}
+                  onChange={(e) => setSecond(e.value)}
+                />
+                <Select
+                  defaultValue={{ value: "", label: "Tercer puesto" }}
+                  options={options}
+                  onChange={(e) => setThird(e.value)}
+                />
+              </div>
+              {error && (
+                <span className="text-yellow-500 font-semibold text-center">
+                  {error}
+                </span>
+              )}
               <button
                 disabled={isSubmit}
                 className="text-gray-800 font-semibold bg-yellow-400 hover:bg-transparent hover:text-white border-2 border-white py-2 px-16 rounded-lg mx-12 mt-4"
@@ -155,4 +213,19 @@ export default function Home() {
       </div>
     </Layout>
   );
+}
+
+export async function getServerSideProps() {
+  try {
+    await dbConnection();
+    const res = await Users.find({});
+    const users = res.map((item) => {
+      const user = item.toObject();
+      user._id = item.id.toString();
+      return user;
+    });
+    return { props: { users } };
+  } catch (error) {
+    console.log(error);
+  }
 }

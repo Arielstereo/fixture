@@ -7,10 +7,10 @@ export default async function handler(req, res) {
 
   if (method === "POST") {
     try {
-      const user = await new User(req.body);
+      const user = await User.create(req.body);
       res.status(200).json(user);
     } catch (error) {
-      res.status(400);
+      res.status(400)
     }
   }
 }

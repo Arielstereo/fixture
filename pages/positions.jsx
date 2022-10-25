@@ -1,11 +1,8 @@
 import { Table, Modal, useModal, Button, Text } from "@nextui-org/react";
 import Image from "next/image";
 import Layout from "../components/Layout";
-import Users from "../models/Users";
-import dbConnection from "../utils/database";
 
-export default function Positions({users}) {
-
+export default function Positions() {
   const { setVisible, bindings } = useModal();
 
   return (
@@ -33,20 +30,29 @@ export default function Positions({users}) {
             className="bg-yellow-500"
           >
             <Modal.Header>
-              <Text id="modal-title" size={25} className="text-white font-bold text-3xl py-4">
+              <Text
+                id="modal-title"
+                size={25}
+                className="text-white font-bold text-3xl py-4"
+              >
                 Reglamento del torneo
               </Text>
             </Modal.Header>
             <Modal.Body>
               <Text id="modal-description" className="font-semibold">
-                En la primera fase cada acierto vale 1 punto.<br/> A partir de
-                octavos de final cada acierto vale 3 puntos.<br/> En cuartos de final
-                5 puntos.<br/> En semifinales 8 puntos.<br/> Tercer puesto 10 puntos.<br/>
-                Final 15 puntos.<br/> El resultado se toma en cuenta dentro de los 90
-                minutos de juego, no cuenta el resultado de la prórroga y/o
-                penales.<br/> Antes de iniciar el torneo cada participante deberá
+                En la primera fase cada acierto vale 1 punto.
+                <br /> A partir de octavos de final cada acierto vale 3 puntos.
+                <br /> En cuartos de final 5 puntos.
+                <br /> En semifinales 8 puntos.
+                <br /> Tercer puesto 10 puntos.
+                <br />
+                Final 15 puntos.
+                <br /> El resultado se toma en cuenta dentro de los 90 minutos
+                de juego, no cuenta el resultado de la prórroga y/o penales.
+                <br /> Antes de iniciar el torneo cada participante deberá
                 elegir el podio: campeón, subcampeón y el ganador del tercer
-                puesto.<br/> Puntajes: Campeón 30 puntos, subcampeón 20 y tercero 10.
+                puesto.
+                <br /> Puntajes: Campeón 30 puntos, subcampeón 20 y tercero 10.
               </Text>
             </Modal.Body>
             <Modal.Footer>
@@ -78,27 +84,29 @@ export default function Positions({users}) {
               <Table aria-label="table" className="w-full h-full z-0">
                 <Table.Header>
                   <Table.Column>
-                    <span className="text-gray-800 text-xs md:text-lg">NOMBRE</span>
+                    <span className="text-gray-800 text-xs md:text-lg">
+                      NOMBRE
+                    </span>
                   </Table.Column>
                   <Table.Column>
-                    <span className="text-gray-800 text-xs md:text-lg">PUNTOS</span>
+                    <span className="text-gray-800 text-xs md:text-lg">
+                      PUNTOS
+                    </span>
                   </Table.Column>
                 </Table.Header>
                 <Table.Body>
-                  {users.map((user) => (
-                    <Table.Row key={user._id}>
-                      <Table.Cell>
-                        <span className="text-sky-400 text-xl md:text-2xl font-semibold uppercase">
-                          {user.name + " " + user.surname}
-                        </span>
-                      </Table.Cell>
-                      <Table.Cell>
-                        <span className="text-yellow-400 text-xl md:text-2xl font-semibold">
-                          0
-                        </span>
-                      </Table.Cell>
-                    </Table.Row>
-                  ))}
+                  <Table.Row>
+                    <Table.Cell>
+                      <span className="text-sky-400 text-xl md:text-2xl font-semibold uppercase">
+                        participante
+                      </span>
+                    </Table.Cell>
+                    <Table.Cell>
+                      <span className="text-yellow-400 text-xl md:text-2xl font-semibold">
+                        0
+                      </span>
+                    </Table.Cell>
+                  </Table.Row>
                 </Table.Body>
               </Table>
             </div>
@@ -108,16 +116,13 @@ export default function Positions({users}) {
               Premios
             </h1>
             <span className="text-yellow-500 font-semibold text-xl">
-              1° Puesto: Gift card Solo Deportes
-              $30000
+              1° Puesto: Gift card Solo Deportes $30000
             </span>
             <span className="text-yellow-500 font-semibold text-xl">
-              2° Puesto: Gift card Solo Deportes
-              $20000
+              2° Puesto: Gift card Solo Deportes $20000
             </span>
             <span className="text-yellow-500 font-semibold text-xl">
-              3° Puesto: Gift card Solo Deportes
-              $15000
+              3° Puesto: Gift card Solo Deportes $15000
             </span>
             <span className="text-yellow-500 font-semibold text-xl">
               4° Puesto: Gift card Solo Deportes $10000
@@ -126,26 +131,12 @@ export default function Positions({users}) {
               * En caso de empate en algún puesto se definirá el ganador primero
               por acierto al campeón, después por acierto al subcampeón, y luego
               por el acierto al tercer puesto. De seguir la igualdad se tendrá
-              en cuenta que participante completo primero sus pronósticos. Sino se realizará un sorteo.
+              en cuenta que participante completo primero sus pronósticos. Sino
+              se realizará un sorteo.
             </span>
           </div>
         </div>
       </div>
     </Layout>
   );
-}
-
-export async function getServerSideProps() {
-  try {
-    await dbConnection();
-    const res = await Users.find({});
-    const users = res.map((item) => {
-      const user = item.toObject();
-      user._id = item.id.toString();
-      return user;
-    });
-    return { props: { users } };
-  } catch (error) {
-    console.log(error);
-  }
 }
