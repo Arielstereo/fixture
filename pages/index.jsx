@@ -94,13 +94,13 @@ export default function Home({ users }) {
       second,
       third,
     };
-    const duplicate = users.find((user) => toString(user.password) === toString(newUser.password));
+    const duplicate = users.find((user) => user.password === Number(newUser.password));
     console.log(newUser);
 
     if (!name || !surname || !password || !first || !second || !third) {
       setError("* Todos los campos son obligatorios!");
     }
-    if (password && duplicate) {
+    if (duplicate) {
       setMessage("* El usuario ya existe!");
     } else {
       const userSaved = await data(newUser);
