@@ -24,7 +24,6 @@ export default function Home({ users }) {
     setSecond,
     third,
     setThird,
-    setUser,
   } = useAuth();
 
   const [isSubmit, setIsSubmit] = useState(false);
@@ -78,7 +77,6 @@ export default function Home({ users }) {
         body: JSON.stringify(user),
       });
       console.log(res);
-      router.push("/results");
     } catch (error) {
       console.log(error);
     }
@@ -94,8 +92,9 @@ export default function Home({ users }) {
       second,
       third,
     };
-    const duplicate = users.find((user) => user.password === Number(newUser.password));
-    console.log(newUser);
+    const duplicate = await users.find(
+      (user) => user.password === Number(newUser.password)
+    );
 
     if (!name || !surname || !password || !first || !second || !third) {
       setError("* Todos los campos son obligatorios!");
@@ -104,8 +103,9 @@ export default function Home({ users }) {
       setMessage("* El usuario ya existe!");
     } else {
       const userSaved = await data(newUser);
+      console.log(userSaved);
       setIsSubmit(true);
-      setUser(userSaved);
+      router.push("/results/podium");
     }
   };
 
@@ -139,7 +139,7 @@ export default function Home({ users }) {
                 label="Nombre"
                 placeholder="Ingrese su nombre"
                 color="warning"
-                className="bg-white w-96"
+                className="bg-white md:w-80"
                 onChange={(e) => setName(e.target.value)}
               />
               <Input
@@ -149,7 +149,7 @@ export default function Home({ users }) {
                 label="Apellido"
                 placeholder="Ingrese su apellido"
                 color="warning"
-                className="bg-white w-96"
+                className="bg-white md:w-80"
                 onChange={(e) => setSurname(e.target.value)}
               />
 
@@ -160,7 +160,7 @@ export default function Home({ users }) {
                 label="Contraseña (DNI)"
                 placeholder="Ingrese su DNI"
                 color="warning"
-                className="bg-white w-96"
+                className="bg-white md:w-80"
                 type="password"
                 onChange={(e) => setPassword(e.target.value)}
               />

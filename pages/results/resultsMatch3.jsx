@@ -1,14 +1,14 @@
-import dbConnection from "../utils/database";
-import Match1 from "../models/Match1";
-import Layout from "../components/Layout";
+import dbConnection from "../../utils/database";
+import Match3 from "../../models/Match3";
+import Layout from "../../components/Layout";
 import { Collapse, Text, Grid, Badge } from "@nextui-org/react";
 
-const ResultMatch1 = ({ results }) => {
+const ResultMatch3 = ({ results }) => {
   return (
     <Layout>
       <div className="p-8">
         <h1 className="text-sky-400 text-3xl md:text-6xl text-center font-bold mt-32 mb-8">
-          Pronósticos - Fecha 1
+          Pronósticos  Fecha 3
         </h1>
         <div className="flex flex-wrap mb-32">
           <Grid.Container gap={2} className="mb-64">
@@ -211,7 +211,7 @@ const ResultMatch1 = ({ results }) => {
 export async function getServerSideProps() {
   try {
     await dbConnection();
-    const res = await Match1.find({});
+    const res = await Match3.find({});
     const results = res.map((item) => {
       const result = item.toObject();
       result._id = item.id.toString();
@@ -223,4 +223,4 @@ export async function getServerSideProps() {
   }
 }
 
-export default ResultMatch1;
+export default ResultMatch3;

@@ -5,9 +5,19 @@ import Layout from "../../components/Layout";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { ImSpinner3 } from "react-icons/im";
+import Match3 from "../../models/Match3";
+import dbConnection from "../../utils/database";
 
-export default function Match3() {
-  const { name, surname, setSurname, setName, setMatch3 } = useAuth();
+export default function Stage3({ match3 }) {
+  const {
+    name,
+    surname,
+    setSurname,
+    setName,
+    setMatch3,
+    password,
+    setPassword,
+  } = useAuth();
   const [checked, setChecked] = useState("");
   const [checked2, setChecked2] = useState("");
   const [checked3, setChecked3] = useState("");
@@ -29,6 +39,7 @@ export default function Match3() {
 
   const [isSubmit, setIsSubmit] = useState(false);
   const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
 
   const data = async (result) => {
     try {
@@ -40,18 +51,17 @@ export default function Match3() {
         body: JSON.stringify(result),
       });
       console.log(res);
-      router.push("/pronosticos/match3");
     } catch (error) {
       console.log(error);
     }
   };
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const result = {
       name,
       surname,
+      password,
       checked,
       checked2,
       checked3,
@@ -69,9 +79,13 @@ export default function Match3() {
       checked15,
       checked16,
     };
+    const duplicate = await match3.find(
+      (res) => res.password === Number(result.password)
+    );
     if (
       !name ||
       !surname ||
+      !password ||
       !checked ||
       !checked2 ||
       !checked3 ||
@@ -89,12 +103,15 @@ export default function Match3() {
       !checked15 ||
       !checked16
     ) {
-      setMessage("* Complete todos los resultados!");
+      setError("* Complete todos los resultados!");
+    }
+    if (duplicate) {
+      setMessage("* El usuario ya existe!");
     } else {
       const resultSaved = await data(result);
       setIsSubmit(true);
       setMatch3(resultSaved);
-      router.push("/positions");
+      router.push("/results/resultsMatch3");
     }
   };
 
@@ -114,27 +131,43 @@ export default function Match3() {
         </div>
         <div className="mx-8 md:mx-36 lg:mx-32 mb-8">
           <form onSubmit={handleSubmit} className="flex flex-col items-center">
-            <div className="flex gap-8">
+            <div className="flex flex-col gap-8">
               <Input
                 rounded
                 bordered
-                size="xl"
+                size="lg"
                 label="Nombre"
                 placeholder="Ingresa tu nombre"
                 color="warning"
-                className="bg-white"
+                className="bg-white md:w-80"
                 onChange={(e) => setName(e.target.value)}
               />
               <Input
                 rounded
                 bordered
-                size="xl"
+                size="lg"
                 label="Apellido"
                 placeholder="Ingresa tu apellido"
                 color="warning"
-                className="bg-white"
+                className="bg-white md:w-80"
                 onChange={(e) => setSurname(e.target.value)}
               />
+              <Input
+                rounded
+                bordered
+                size="lg"
+                label="Contraseña (DNI)"
+                placeholder="Ingrese su DNI"
+                color="warning"
+                className="bg-white md:w-80"
+                type="password"
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              {message && (
+                <span className="text-yellow-500 font-semibold text-center">
+                  {message}
+                </span>
+              )}
             </div>
             <div className="flex flex-wrap justify-center gap-2 mt-4">
               <div className="mx-4">
@@ -858,9 +891,9 @@ export default function Match3() {
                 </Card>
               </div>
             </div>
-            {message && (
+            {error && (
               <span className="text-yellow-500 font-semibold text-center my-4">
-                {message}
+                {error}
               </span>
             )}
             <button
@@ -881,4 +914,18 @@ export default function Match3() {
       </div>
     </Layout>
   );
+}
+export async function getServerSideProps() {
+  try {
+    await dbConnection();
+    const res = await Match3.find({});
+    const match3 = res.map((item) => {
+      const user = item.toObject();
+      user._id = item.id.toString();
+      return user;
+    });
+    return { props: { match3 } };
+  } catch (error) {
+    console.log(error);
+  }
 }

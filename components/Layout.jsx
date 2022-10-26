@@ -73,18 +73,40 @@ export default function Layout({ children }) {
               <ul className="flex flex-col md:flex-row gap-6 text-red-700 font-bold">
                 <li>
                   <Link href="/positions">
-                    <a className="hover:text-sky-400 text-lg">Posiciones</a>
+                    <a className="hover:text-sky-400 text-xl pl-4">Posiciones</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/results">
-                    <a className="hover:text-sky-400 text-lg">Podio</a>
+                  <Link href="/results/podium">
+                    <a className="hover:text-sky-400 text-xl pl-4">Podio</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/resultsMatch1">
-                    <a className="hover:text-sky-400 text-lg">Pronósticos</a>
-                  </Link>
+                  <Dropdown>
+                    <Dropdown.Button
+                      flat
+                      className="text-red-700 font-bold text-xl pb-3"
+                    >
+                      Pronósticos
+                    </Dropdown.Button>
+                    <Dropdown.Menu aria-label="Static Actions" className="bg-sky-300">
+                      <Dropdown.Item>
+                        <Link href="/results/resultsMatch1">
+                          <a className="text-lg font-semibold px-16">Fecha1</a>
+                        </Link>
+                      </Dropdown.Item>
+                      <Dropdown.Item>
+                      <Link href="/results/resultsMatch2">
+                          <a className="text-lg font-semibold px-16">Fecha2</a>
+                        </Link>
+                      </Dropdown.Item>
+                      <Dropdown.Item>
+                      <Link href="/results/resultsMatch3">
+                          <a className="text-lg font-semibold px-16">Fecha3</a>
+                        </Link>
+                      </Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
                 </li>
                 <li>
                   <Dropdown>

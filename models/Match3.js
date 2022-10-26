@@ -1,61 +1,82 @@
-import {Schema, model, models} from "mongoose";
+import { Schema, model, models } from "mongoose";
 
 const ResultMatch3Schema = new Schema({
   name: {
-    type: "string",
-    unique: true,
+    type: String,
+    required: true
   },
   surname: {
-    type: "string",
-    unique: true,
+    type: String,
+    required: true
+  },
+  password: {
+    type: Number,
+    required: true,
+    unique: true
   },
   checked: {
-    type: "string",
+    type: String,
+    required: true,
   },
   checked2: {
-    type: "string",
+    type: String,
+    required: true,
   },
   checked3: {
-    type: "string",
+    type: String,
+    required: true,
   },
   checked4: {
-    type: "string",
+    type: String,
+    required: true,
   },
   checked5: {
-    type: "string",
+    type: String,
+    required: true,
   },
   checked6: {
-    type: "string",
+    type: String,
+    required: true,
   },
   checked7: {
-    type: "string",
+    type: String,
+    required: true,
   },
   checked8: {
-    type: "string",
+    type: String,
+    required: true,
   },
   checked9: {
-    type: "string",
+    type: String,
+    required: true,
   },
   checked10: {
-    type: "string",
+    type: String,
+    required: true,
   },
   checked11: {
-    type: "string",
+    type: String,
+    required: true,
   },
   checked12: {
-    type: "string",
+    type: String,
+    required: true,
   },
   checked13: {
-    type: "string",
+    type: String,
+    required: true,
   },
   checked14: {
-    type: "string",
+    type: String,
+    required: true,
   },
   checked15: {
-    type: "string",
+    type: String,
+    required: true,
   },
   checked16: {
-    type: "string",
+    type: String,
+    required: true,
   },
 });
 
