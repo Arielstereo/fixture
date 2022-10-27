@@ -132,7 +132,7 @@ export default function Home({ users }) {
           border: "2px solid #fff",
         },
       });
-    } else {
+    } if(name && surname && password && first && second && third && !duplicate) {
       const userSaved = await data(newUser);
       console.log(userSaved);
       setIsSubmit(true);
