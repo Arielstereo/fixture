@@ -180,21 +180,36 @@ export default function Home({ users }) {
                 </span>
               )}
               <div className="flex flex-col md:flex-row mt-4 gap-4">
-                <Select
-                  defaultValue={{ value: "", label: "Campeón" }}
-                  options={options}
-                  onChange={(e) => setFirst(e.value)}
-                />
-                <Select
-                  defaultValue={{ value: "", label: "Subcampeón" }}
-                  options={options}
-                  onChange={(e) => setSecond(e.value)}
-                />
-                <Select
-                  defaultValue={{ value: "", label: "Tercer puesto" }}
-                  options={options}
-                  onChange={(e) => setThird(e.value)}
-                />
+                <div className="flex flex-col gap-2">
+                  <Select
+                    defaultValue={{ value: "", label: "Campeón" }}
+                    options={options}
+                    onChange={(e) => setFirst(e.value)}
+                  />
+                  <span className="text-yellow-500 font-semibold text-center">
+                    30 puntos
+                  </span>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <Select
+                    defaultValue={{ value: "", label: "Subcampeón" }}
+                    options={options}
+                    onChange={(e) => setSecond(e.value)}
+                  />
+                  <span className="text-yellow-500 font-semibold text-center">
+                    20 puntos
+                  </span>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <Select
+                    defaultValue={{ value: "", label: "Tercer puesto" }}
+                    options={options}
+                    onChange={(e) => setThird(e.value)}
+                  />
+                  <span className="text-yellow-500 font-semibold text-center">
+                    10 puntos
+                  </span>
+                </div>
               </div>
               {error && (
                 <span className="text-yellow-500 font-semibold text-center">
