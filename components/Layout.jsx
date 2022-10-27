@@ -6,6 +6,8 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { TbWorld } from "react-icons/tb";
 import { Dropdown } from "@nextui-org/react";
+import styles from '../styles/Layout.module.css';
+
 
 export default function Layout({ children }) {
   const [navbar, setNavbar] = useState(false);
@@ -16,25 +18,24 @@ export default function Layout({ children }) {
         <meta name="description" content="E-commerce" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <nav className="w-full bg-slate-50 py-2 fixed top-0 z-10">
-        <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+      <nav className={styles.nav}>
+        <div className="justify-between px-4 pt-2 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
             <div className="flex items-center justify-between py-3 md:py-5 md:block">
               <Link href="/">
-                <a className="text-3xl text-red-700 hover:text-sky-400 font-bold flex items-center gap-4">
-                  <Image src="/recicle.png" width="50" height="50" alt="logo" />{" "}
+                <a className="text-3xl text-white hover:text-sky-400 font-bold flex items-center gap-4">
                   Copa Tredi 2022
                 </a>
               </Link>
               <div className="md:hidden">
                 <button
-                  className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+                  className="p-2 text-gwhite rounded-md outline-none focus:border-gray-400 focus:border"
                   onClick={() => setNavbar(!navbar)}
                 >
                   {navbar ? (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="w-6 h-6 text-slate-800"
+                      className="w-6 h-6 text-white"
                       viewBox="0 0 20 20"
                       fill="currentColor"
                     >
@@ -47,7 +48,7 @@ export default function Layout({ children }) {
                   ) : (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="w-6 h-6 text-slate-800"
+                      className="w-6 h-6 text-white"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -70,7 +71,7 @@ export default function Layout({ children }) {
                 navbar ? "block" : "hidden"
               }`}
             >
-              <ul className="flex flex-col md:flex-row gap-6 text-red-700 font-bold">
+              <ul className="flex flex-col pt-4 md:flex-row gap-6 text-white font-bold">
                 <li>
                   <Link href="/positions">
                     <a className="hover:text-sky-400 text-xl pl-4">Posiciones</a>
@@ -85,7 +86,7 @@ export default function Layout({ children }) {
                   <Dropdown>
                     <Dropdown.Button
                       flat
-                      className="text-red-700 font-bold text-xl pb-3"
+                      className="text-white font-bold text-xl pb-3"
                     >
                       Pronósticos
                     </Dropdown.Button>
@@ -112,7 +113,7 @@ export default function Layout({ children }) {
                   <Dropdown>
                     <Dropdown.Button
                       flat
-                      className="text-red-700 font-bold text-xl pb-3"
+                      className="text-white font-bold text-xl pb-3"
                     >
                       Fase de Grupos
                     </Dropdown.Button>
