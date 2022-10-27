@@ -99,9 +99,21 @@ export default function Home({ users }) {
 
     if (!name || !surname || !password || !first || !second || !third) {
       setError("* Todos los campos son obligatorios!");
+      setName("");
+      setSurname("");
+      setPassword("");
+      setFirst("");
+      setSecond("");
+      setThird("");
     }
     if (duplicate) {
       setMessage("* El usuario ya existe!");
+      setName("");
+      setSurname("");
+      setPassword("");
+      setFirst("");
+      setSecond("");
+      setThird("");
     } else {
       const userSaved = await data(newUser);
       console.log(userSaved);
