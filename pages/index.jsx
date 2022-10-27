@@ -105,6 +105,15 @@ export default function Home({ users }) {
       setFirst("");
       setSecond("");
       setThird("");
+      toast.error("Completa todos los campos!", {
+        duration: 6000,
+        position: "top-center",
+        style: {
+          background: "#000",
+          color: "#fff",
+          border: "2px solid #fff",
+        },
+      });
     }
     if (duplicate) {
       setMessage("* El usuario ya existe!");
@@ -114,6 +123,15 @@ export default function Home({ users }) {
       setFirst("");
       setSecond("");
       setThird("");
+      toast.error("Ya completaste esta fase!", {
+        duration: 6000,
+        position: "top-center",
+        style: {
+          background: "#000",
+          color: "#fff",
+          border: "2px solid #fff",
+        },
+      });
     } else {
       const userSaved = await data(newUser);
       console.log(userSaved);
