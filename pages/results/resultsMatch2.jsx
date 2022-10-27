@@ -2,13 +2,14 @@ import dbConnection from "../../utils/database";
 import Match2 from "../../models/Match2";
 import Layout from "../../components/Layout";
 import { Collapse, Text, Grid, Badge } from "@nextui-org/react";
+import Link from "next/link";
 
 const ResultMatch2 = ({ results }) => {
   return (
     <Layout>
       <div className="p-8">
         <h1 className="text-sky-400 text-3xl md:text-6xl text-center font-bold mt-32 mb-8">
-          Pronósticos  Fecha 2
+          Pronósticos Fecha 2
         </h1>
         <div className="flex flex-wrap mb-32">
           <Grid.Container gap={2} className="mb-64">
@@ -202,6 +203,13 @@ const ResultMatch2 = ({ results }) => {
               </Grid>
             ))}
           </Grid.Container>
+        </div>
+        <div className="text-center pb-8">
+          <Link href="/pronosticos/match3">
+            <a className="text-xl font-semibold text-yellow-400 hover:text-sky-400">
+              Completa la Fecha 3
+            </a>
+          </Link>
         </div>
       </div>
     </Layout>

@@ -9,6 +9,7 @@ import { useState } from "react";
 import Users from "../models/Users";
 import dbConnection from "../utils/database";
 import Select from "react-select";
+import toast from "react-hot-toast";
 
 export default function Home({ users }) {
   const {
@@ -105,13 +106,22 @@ export default function Home({ users }) {
       const userSaved = await data(newUser);
       console.log(userSaved);
       setIsSubmit(true);
+      toast.success("Tus datos han sido guardado correctamente, suerte!", {
+        duration: 6000,
+        position: "top-center",
+        style: {
+          background: "#000",
+          color: "#fff",
+          border: "2px solid #fff",
+        },
+      });
       router.push("/results/podium");
     }
   };
 
   return (
     <Layout>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center w-full">
         <div className="flex flex-col gap-4 text-center mt-32">
           <h1 className="text-6xl text-sky-400 font-bold animate__animated animate__backInLeft">
             Copa Tredi Argentina

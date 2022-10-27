@@ -8,8 +8,8 @@ const Podium = ({ users }) => {
   return (
     <Layout>
       <div>
-        <h1 className="text-sky-400 text-4xl md:text-6xl text-center font-bold p-32">
-          Pronósticos  Podio
+        <h1 className="text-sky-400 text-4xl md:text-6xl text-center font-bold py-32">
+          Pronósticos Podio
         </h1>
         <div className="flex flex-col md:flex-wrap md:flex-row mx-auto md:mx-32 gap-6 w-64 md:w-full mb-32">
           {users.map((user) => (
@@ -41,19 +41,13 @@ const Podium = ({ users }) => {
             </Table>
           ))}
         </div>
-      <div className="flex gap-4 justify-center pb-8">
-      <Link href="/pronosticos/match1">
-        <a className="text-xl font-semibold text-yellow-400 hover:text-sky-400">Completa la Fecha 1</a>
-        </Link>
-        <span className="text-white text-xl font-bold">|</span>
-        <Link href="/pronosticos/match2">
-        <a className="text-xl font-semibold text-yellow-400 hover:text-sky-400">Completa la Fecha 2</a>
-        </Link>
-        <span className="text-white text-xl font-bold">|</span>
-        <Link href="/pronosticos/match3">
-        <a className="text-xl font-semibold text-yellow-400 hover:text-sky-400">Completa la Fecha 3</a>
-        </Link>
-      </div>
+        <div className="text-center pb-8">
+          <Link href="/pronosticos/match1">
+            <a className="text-xl font-semibold text-yellow-400 hover:text-sky-400">
+              Completa la Fecha 1
+            </a>
+          </Link>
+        </div>
       </div>
     </Layout>
   );

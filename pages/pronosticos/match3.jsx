@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import { ImSpinner3 } from "react-icons/im";
 import Match3 from "../../models/Match3";
 import dbConnection from "../../utils/database";
+import toast from "react-hot-toast";
 
 export default function Stage3({ match3 }) {
   const {
@@ -111,6 +112,15 @@ export default function Stage3({ match3 }) {
       const resultSaved = await data(result);
       setIsSubmit(true);
       setMatch3(resultSaved);
+      toast.success("Tus datos han sido guardado correctamente, suerte!", {
+        duration: 6000,
+        position: "top-center",
+        style: {
+          background: "#000",
+          color: "#fff",
+          border: "2px solid #fff",
+        },
+      });
       router.push("/results/resultsMatch3");
     }
   };
