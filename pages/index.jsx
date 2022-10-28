@@ -106,7 +106,7 @@ export default function Home({ users }) {
       setSecond("");
       setThird("");
       toast.error("Completa todos los campos!", {
-        duration: 6000,
+        duration: 3500,
         position: "top-center",
         style: {
           background: "#000",
@@ -124,7 +124,7 @@ export default function Home({ users }) {
       setSecond("");
       setThird("");
       toast.error("Ya completaste esta fase!", {
-        duration: 6000,
+        duration: 3500,
         position: "top-center",
         style: {
           background: "#000",
@@ -137,7 +137,7 @@ export default function Home({ users }) {
       console.log(userSaved);
       setIsSubmit(true);
       toast.success("Tus datos han sido guardado correctamente, suerte!", {
-        duration: 6000,
+        duration: 3500,
         position: "top-center",
         style: {
           background: "#000",

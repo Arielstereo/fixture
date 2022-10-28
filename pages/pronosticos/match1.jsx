@@ -106,22 +106,68 @@ export default function Stage1({ match1 }) {
       !checked16
     ) {
       setError("* Complete todos los resultados!");
-    }
-    if (duplicate) {
-      setMessage("* El usuario ya existe!");
-    } else {
-      const resultSaved = await data(result);
-      setIsSubmit(true);
-      setMatch1(resultSaved);
-      toast.success("Tus datos han sido guardado correctamente, suerte!", {
-        duration: 6000,
+      setName("");
+      setSurname("");
+      setPassword("");
+      toast.error("Completa todos los campos!", {
+        duration: 3500,
         position: "top-center",
         style: {
           background: "#000",
           color: "#fff",
           border: "2px solid #fff",
         },
-      });      
+      });
+    }
+    if (duplicate) {
+      setMessage("* El usuario ya existe!");
+      setName("");
+      setSurname("");
+      setPassword("");
+      toast.error("Ya completaste esta fase!", {
+        duration: 3500,
+        position: "top-center",
+        style: {
+          background: "#000",
+          color: "#fff",
+          border: "2px solid #fff",
+        },
+      });
+    }
+    if (
+      name &&
+      surname &&
+      password &&
+      checked &&
+      checked2 &&
+      checked3 &&
+      checked4 &&
+      checked5 &&
+      checked6 &&
+      checked7 &&
+      checked8 &&
+      checked9 &&
+      checked10 &&
+      checked11 &&
+      checked12 &&
+      checked13 &&
+      checked14 &&
+      checked15 &&
+      checked16 &&
+      !duplicate
+    ) {
+      const resultSaved = await data(result);
+      setIsSubmit(true);
+      setMatch1(resultSaved);
+      toast.success("Tus datos han sido guardado correctamente, suerte!", {
+        duration: 3500,
+        position: "top-center",
+        style: {
+          background: "#000",
+          color: "#fff",
+          border: "2px solid #fff",
+        },
+      });
       router.push("/results/resultsMatch1");
     }
   };
