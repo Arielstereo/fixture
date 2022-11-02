@@ -1,4 +1,11 @@
-import { Table, Modal, useModal, Button, Text } from "@nextui-org/react";
+import {
+  Table,
+  Modal,
+  useModal,
+  Button,
+  Text,
+  Avatar,
+} from "@nextui-org/react";
 import Image from "next/image";
 import Layout from "../components/Layout";
 
@@ -67,7 +74,6 @@ export default function Positions() {
             </Modal.Footer>
           </Modal>
         </div>
-
         <div>
           <div className="flex flex-col lg:flex-row lg:gap-16 justify-center items-center my-4">
             <div className="w-[380px] md:w-[600px] rounded-3xl">
@@ -98,9 +104,71 @@ export default function Positions() {
                 <Table.Body>
                   <Table.Row>
                     <Table.Cell>
-                      <span className="text-sky-400 text-xl md:text-2xl font-semibold uppercase">
-                        participante
+                      <div className="flex gap-2 items-center">
+                        <Avatar
+                          text="1"
+                          color="gradient"
+                          textColor="white"
+                          size="sm"
+                        />
+                        <span className="text-sky-400 text-xl md:text-2xl font-semibold">
+                          Participante
+                        </span>
+                      </div>
+                    </Table.Cell>
+                    <Table.Cell>
+                      <span className="text-yellow-400 text-xl md:text-2xl font-semibold px-4">
+                        0
                       </span>
+                    </Table.Cell>
+                  </Table.Row>
+                  <Table.Row>
+                    <Table.Cell>
+                      <div className="flex gap-2 items-center">
+                        <Avatar
+                          text="2"
+                          color="success"
+                          textColor="white"
+                          size="sm"
+                        />
+                        <span className="text-sky-400 text-xl md:text-2xl font-semibold">
+                          Participante
+                        </span>
+                      </div>
+                    </Table.Cell>
+                    <Table.Cell>
+                      <span className="text-yellow-400 text-xl md:text-2xl font-semibold px-4">
+                        0
+                      </span>
+                    </Table.Cell>
+                  </Table.Row>
+                  <Table.Row>
+                    <Table.Cell>
+                      <div className="flex gap-2 items-center">
+                        <Avatar
+                          text="3"
+                          color="warning"
+                          textColor="white"
+                          size="sm"
+                        />
+                        <span className="text-sky-400 text-xl md:text-2xl font-semibold">
+                          Participante
+                        </span>
+                      </div>
+                    </Table.Cell>
+                    <Table.Cell>
+                      <span className="text-yellow-400 text-xl md:text-2xl font-semibold px-4">
+                        0
+                      </span>
+                    </Table.Cell>
+                  </Table.Row>
+                  <Table.Row>
+                    <Table.Cell>
+                      <div className="flex gap-2 items-center">
+                        <span className="text-sky-400 text-xl md:text-2xl font-semibold ml-8">
+                          Participante
+                        </span>
+                      </div>
                     </Table.Cell>
                     <Table.Cell>
                       <span className="text-yellow-400 text-xl md:text-2xl font-semibold px-4">
@@ -141,9 +209,71 @@ export default function Positions() {
                 <Table.Body>
                   <Table.Row>
                     <Table.Cell>
-                      <span className="text-sky-400 text-xl md:text-2xl font-semibold uppercase">
-                        participante
+                      <div className="flex gap-2 items-center">
+                        <Avatar
+                          text="1"
+                          color="gradient"
+                          textColor="white"
+                          size="sm"
+                        />
+                        <span className="text-sky-400 text-xl md:text-2xl font-semibold">
+                          Participante
+                        </span>
+                      </div>
+                    </Table.Cell>
+                    <Table.Cell>
+                      <span className="text-yellow-400 text-xl md:text-2xl font-semibold px-4">
+                        0
                       </span>
+                    </Table.Cell>
+                  </Table.Row>
+                  <Table.Row>
+                    <Table.Cell>
+                      <div className="flex gap-2 items-center">
+                        <Avatar
+                          text="2"
+                          color="success"
+                          textColor="white"
+                          size="sm"
+                        />
+                        <span className="text-sky-400 text-xl md:text-2xl font-semibold">
+                          Participante
+                        </span>
+                      </div>
+                    </Table.Cell>
+                    <Table.Cell>
+                      <span className="text-yellow-400 text-xl md:text-2xl font-semibold px-4">
+                        0
+                      </span>
+                    </Table.Cell>
+                  </Table.Row>
+                  <Table.Row>
+                    <Table.Cell>
+                      <div className="flex gap-2 items-center">
+                        <Avatar
+                          text="3"
+                          color="warning"
+                          textColor="white"
+                          size="sm"
+                        />
+                        <span className="text-sky-400 text-xl md:text-2xl font-semibold">
+                          Participante
+                        </span>
+                      </div>
+                    </Table.Cell>
+                    <Table.Cell>
+                      <span className="text-yellow-400 text-xl md:text-2xl font-semibold px-4">
+                        0
+                      </span>
+                    </Table.Cell>
+                  </Table.Row>
+                  <Table.Row>
+                    <Table.Cell>
+                      <div className="flex gap-2 items-center">
+                        <span className="text-sky-400 text-xl md:text-2xl font-semibold ml-8">
+                          Participante
+                        </span>
+                      </div>
                     </Table.Cell>
                     <Table.Cell>
                       <span className="text-yellow-400 text-xl md:text-2xl font-semibold px-4">

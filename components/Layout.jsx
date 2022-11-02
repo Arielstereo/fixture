@@ -2,12 +2,16 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaLinkedinIn,
+  FaRegCopyright,
+} from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { TbWorld } from "react-icons/tb";
 import { Dropdown } from "@nextui-org/react";
-import styles from '../styles/Layout.module.css';
-
+import styles from "../styles/Layout.module.css";
 
 export default function Layout({ children }) {
   const [navbar, setNavbar] = useState(false);
@@ -74,7 +78,9 @@ export default function Layout({ children }) {
               <ul className="flex flex-col pt-4 md:flex-row gap-6 text-white font-bold">
                 <li>
                   <Link href="/positions">
-                    <a className="hover:text-sky-400 text-xl pl-4">Posiciones</a>
+                    <a className="hover:text-sky-400 text-xl pl-4">
+                      Posiciones
+                    </a>
                   </Link>
                 </li>
                 <li>
@@ -90,19 +96,22 @@ export default function Layout({ children }) {
                     >
                       Pronósticos
                     </Dropdown.Button>
-                    <Dropdown.Menu aria-label="Static Actions" className="bg-sky-300">
+                    <Dropdown.Menu
+                      aria-label="Static Actions"
+                      className="bg-sky-300"
+                    >
                       <Dropdown.Item>
                         <Link href="/results/resultsMatch1">
                           <a className="text-lg font-semibold px-16">Fecha1</a>
                         </Link>
                       </Dropdown.Item>
                       <Dropdown.Item>
-                      <Link href="/results/resultsMatch2">
+                        <Link href="/results/resultsMatch2">
                           <a className="text-lg font-semibold px-16">Fecha2</a>
                         </Link>
                       </Dropdown.Item>
                       <Dropdown.Item>
-                      <Link href="/results/resultsMatch3">
+                        <Link href="/results/resultsMatch3">
                           <a className="text-lg font-semibold px-16">Fecha3</a>
                         </Link>
                       </Dropdown.Item>
@@ -117,7 +126,10 @@ export default function Layout({ children }) {
                     >
                       Fase de Grupos
                     </Dropdown.Button>
-                    <Dropdown.Menu aria-label="Static Actions" className="bg-sky-300">
+                    <Dropdown.Menu
+                      aria-label="Static Actions"
+                      className="bg-sky-300"
+                    >
                       <Dropdown.Item>
                         <Link href="/pronosticos/match1">
                           <a className="text-lg font-semibold px-16">Fecha1</a>
@@ -210,6 +222,12 @@ export default function Layout({ children }) {
               </li>
             </ul>
           </div>
+        </div>
+        <div className="flex py-6 gap-2 text-white font-semibold items-center justify-center">
+          <span>
+            <FaRegCopyright />
+          </span>
+          <span>Ariel Martinez</span>
         </div>
       </footer>
     </div>

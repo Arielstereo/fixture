@@ -181,7 +181,7 @@ export default function Stage1({ match1 }) {
               Fase de grupos - Fecha 1
             </h3>
             <span className="text-yellow-500 text-lg font-semibold">
-              * Completa todos los resultados antes del 11/11. En esta fase cada
+              * Completa todos los resultados antes del 14/11. En esta fase cada
               acierto vale 1 punto!
             </span>
           </div>
@@ -955,15 +955,15 @@ export default function Stage1({ match1 }) {
             )}
             <button
               disabled={isSubmit}
-              className="text-gray-800 font-semibold bg-yellow-400 hover:bg-transparent hover:text-white border-2 border-white py-2 px-16 rounded-lg mx-12 mt-4"
+              className= {isSubmit ?("text-gray-100 font-semibold bg-gray-600 border-2 border-white py-2 px-16 rounded-lg mx-12 mt-4"):("text-gray-800 font-semibold bg-yellow-400 hover:bg-transparent hover:text-white border-2 border-white py-2 px-16 rounded-lg mx-12 mt-4")}
             >
               {isSubmit ? (
                 <div className="flex gap-6">
-                  <ImSpinner3 className="h-6 w-6 animate-spin" />
+                  <ImSpinner3 className="h-6 w-6 animate-spin text-gray-100" />
                   <span>Cargando...</span>
                 </div>
               ) : (
-                "Enviar"
+                "Guardar"
               )}
             </button>
           </form>
