@@ -6,17 +6,17 @@ import "animate.css";
 import Layout from "../components/Layout";
 import { ImSpinner3 } from "react-icons/im";
 import { useState } from "react";
-import Users from "../models/Users";
+import Kids from "../models/Kids";
 import dbConnection from "../utils/database";
 import Select from "react-select";
 import toast from "react-hot-toast";
 
-export default function Home({ users }) {
+export default function HomeTwo({ kids }) {
   const {
     name,
     setName,
-    surname,
-    setSurname,
+    family,
+    setFamily,
     password,
     setPassword,
     first,
@@ -68,14 +68,14 @@ export default function Home({ users }) {
 
   const router = useRouter();
 
-  const data = async (user) => {
+  const data = async (kid) => {
     try {
-      const res = await fetch("/api/user", {
+      const res = await fetch("/api/kid", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(user),
+        body: JSON.stringify(kid),
       });
       console.log(res);
     } catch (error) {
@@ -85,19 +85,19 @@ export default function Home({ users }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const newUser = {
+    const newKid = {
       name,
-      surname,
+      family,
       password,
       first,
       second,
       third,
     };
-    const duplicate = await users.find(
-      (user) => user.password === Number(newUser.password)
+    const duplicate = await kids.find(
+      (kid) => kid.password === Number(newKid.password)
     );
 
-    if (!name || !surname || !password || !first || !second || !third) {
+    if (!name || !family || !password || !first || !second || !third) {
       setError("* Todos los campos son obligatorios!");
       toast.error("Completa todos los campos!", {
         duration: 3500,
@@ -120,9 +120,9 @@ export default function Home({ users }) {
           border: "2px solid #fff",
         },
       });
-    } if(name && surname && password && first && second && third && !duplicate) {
-      const userSaved = await data(newUser);
-      console.log(userSaved);
+    } if(name && family && password && first && second && third && !duplicate) {
+      const kidSaved = await data(newKid);
+      console.log(kidSaved);
       setIsSubmit(true);
       toast.success("Tus datos han sido guardado correctamente, suerte!", {
         duration: 3500,
@@ -133,7 +133,7 @@ export default function Home({ users }) {
           border: "2px solid #fff",
         },
       });
-      router.push("/results/podium");
+      router.push("/results/podiumKids");
     }
   };
 
@@ -142,7 +142,7 @@ export default function Home({ users }) {
       <div className="flex flex-col items-center w-full">
         <div className="flex flex-col gap-4 text-center mt-32">
           <h1 className="text-6xl text-sky-400 font-bold animate__animated animate__backInLeft">
-            Copa Tredi Argentina
+            Copa <span className="text-yellow-400">Kids</span> Tredi Argentina
           </h1>
           <h2 className="text-5xl text-slate-50 font-bold animate__animated animate__backInRight">
             Mundial Qatar 2022
@@ -153,6 +153,9 @@ export default function Home({ users }) {
             <Image src="/logo.png" width="400" height="400" alt="logo" />
           </div>
           <div className="flex flex-col items-center mt-16 mb-8 mx-8 ">
+          <span className="text-yellow-400 font-semibold">
+              * Puede participar un menor de la familia por integrante de Tredi.
+            </span>
             <span className="text-yellow-400 font-semibold">
               * Ingresa tus datos y elige tu podio antes del 14/11.
             </span>
@@ -164,7 +167,7 @@ export default function Home({ users }) {
                 rounded
                 bordered
                 size="lg"
-                label="Nombre"
+                label="Nombre del menor"
                 placeholder="Ingrese su nombre"
                 color="warning"
                 className="bg-white md:w-80"
@@ -174,18 +177,18 @@ export default function Home({ users }) {
                 rounded
                 bordered
                 size="lg"
-                label="Apellido"
-                placeholder="Ingrese su apellido"
+                label="Nombre del familiar"
+                placeholder="Ingrese el nombre"
                 color="warning"
                 className="bg-white md:w-80"
-                onChange={(e) => setSurname(e.target.value)}
+                onChange={(e) => setFamily(e.target.value)}
               />
 
               <Input
                 rounded
                 bordered
                 size="lg"
-                label="Contraseña (DNI)"
+                label="Contraseña (DNI Adulto)"
                 placeholder="Ingrese su DNI"
                 color="warning"
                 className="bg-white md:w-80"
@@ -250,7 +253,7 @@ export default function Home({ users }) {
             </form>
           </div>
           <div>
-            <Image src="/skipper.png" width="500" height="500" alt="skipper" />
+            <Image src="/mascota.png" width="380" height="380" alt="skipper" />
           </div>
         </div>
       </div>
@@ -261,13 +264,13 @@ export default function Home({ users }) {
 export async function getServerSideProps() {
   try {
     await dbConnection();
-    const res = await Users.find({});
-    const users = res.map((item) => {
+    const res = await Kids.find({});
+    const kids = res.map((item) => {
       const user = item.toObject();
       user._id = item.id.toString();
       return user;
     });
-    return { props: { users } };
+    return { props: { kids } };
   } catch (error) {
     console.log(error);
   }

@@ -1,14 +1,15 @@
 import dbConnection from "../../utils/database";
-import Match3 from "../../models/Match3";
+import Match2Kids from "../../models/Match2Kids";
 import Layout from "../../components/Layout";
-import { Collapse, Table, Grid } from "@nextui-org/react";
+import { Collapse, Grid, Table } from "@nextui-org/react";
+import Link from "next/link";
 
-const ResultMatch3 = ({ results }) => {
+const ResultMatch2Kids = ({ results }) => {
   return (
     <Layout>
       <div className="p-8">
         <h1 className="text-sky-400 text-3xl md:text-6xl text-center font-bold mt-32 mb-8">
-          Pronósticos Fecha 3
+          Pronósticos Fecha 2 <span className="text-yellow-400">Kids</span>
         </h1>
         <div className="flex flex-wrap mb-32">
           <Grid.Container gap={2} className="mb-64">
@@ -16,7 +17,7 @@ const ResultMatch3 = ({ results }) => {
               <Grid key={item._id}>
                 <Collapse.Group splitted>
                   <Collapse
-                    title={item.name + " " + item.surname}
+                    title={item.name + " " + "/" + " " + item.family}
                     className="uppercase text-xl font-bold w-64 md:w-96"
                   >
                     <Table className="w-full">
@@ -35,7 +36,7 @@ const ResultMatch3 = ({ results }) => {
                       <Table.Body>
                         <Table.Row>
                           <Table.Cell>
-                            <span className="text-xs md:text-lg">sen-ecu</span>
+                            <span className="text-xs md:text-lg">sen-qat</span>
                           </Table.Cell>
                           <Table.Cell>
                             <span className="text-green-700 text-xs md:text-lg">
@@ -45,7 +46,7 @@ const ResultMatch3 = ({ results }) => {
                         </Table.Row>
                         <Table.Row>
                           <Table.Cell>
-                            <span className="text-xs md:text-lg">hol-qat</span>
+                            <span className="text-xs md:text-lg">hol-ecu</span>
                           </Table.Cell>
                           <Table.Cell>
                             <span className="text-green-700 text-xs md:text-lg">
@@ -55,7 +56,7 @@ const ResultMatch3 = ({ results }) => {
                         </Table.Row>
                         <Table.Row>
                           <Table.Cell>
-                            <span className="text-xs md:text-lg">ing-gal</span>
+                            <span className="text-xs md:text-lg">ing-usa</span>
                           </Table.Cell>
                           <Table.Cell>
                             <span className="text-green-700 text-xs md:text-lg">
@@ -65,7 +66,7 @@ const ResultMatch3 = ({ results }) => {
                         </Table.Row>
                         <Table.Row>
                           <Table.Cell>
-                            <span className="text-xs md:text-lg">ira-usa</span>
+                            <span className="text-xs md:text-lg">ira-gal</span>
                           </Table.Cell>
                           <Table.Cell>
                             <span className="text-green-700 text-xs md:text-lg">
@@ -75,7 +76,7 @@ const ResultMatch3 = ({ results }) => {
                         </Table.Row>
                         <Table.Row>
                           <Table.Cell>
-                            <span className="text-xs md:text-lg">arg-pol</span>
+                            <span className="text-xs md:text-lg">arg-mex</span>
                           </Table.Cell>
                           <Table.Cell>
                             <span className="text-green-700 text-xs md:text-lg">
@@ -85,7 +86,7 @@ const ResultMatch3 = ({ results }) => {
                         </Table.Row>
                         <Table.Row>
                           <Table.Cell>
-                            <span className="text-xs md:text-lg">sau-mex</span>
+                            <span className="text-xs md:text-lg">sau-pol</span>
                           </Table.Cell>
                           <Table.Cell>
                             <span className="text-green-700 text-xs md:text-lg">
@@ -95,7 +96,7 @@ const ResultMatch3 = ({ results }) => {
                         </Table.Row>
                         <Table.Row>
                           <Table.Cell>
-                            <span className="text-xs md:text-lg">din-aus</span>
+                            <span className="text-xs md:text-lg">din-fra</span>
                           </Table.Cell>
                           <Table.Cell>
                             <span className="text-green-700 text-xs md:text-lg">
@@ -105,7 +106,7 @@ const ResultMatch3 = ({ results }) => {
                         </Table.Row>
                         <Table.Row>
                           <Table.Cell>
-                            <span className="text-xs md:text-lg">tun-fra</span>
+                            <span className="text-xs md:text-lg">tun-aus</span>
                           </Table.Cell>
                           <Table.Cell>
                             <span className="text-green-700 text-xs md:text-lg">
@@ -115,7 +116,7 @@ const ResultMatch3 = ({ results }) => {
                         </Table.Row>
                         <Table.Row>
                           <Table.Cell>
-                            <span className="text-xs md:text-lg">ale-cos</span>
+                            <span className="text-xs md:text-lg">ale-esp</span>
                           </Table.Cell>
                           <Table.Cell>
                             <span className="text-green-700 text-xs md:text-lg">
@@ -125,7 +126,7 @@ const ResultMatch3 = ({ results }) => {
                         </Table.Row>
                         <Table.Row>
                           <Table.Cell>
-                            <span className="text-xs md:text-lg">jap-esp</span>
+                            <span className="text-xs md:text-lg">jap-cos</span>
                           </Table.Cell>
                           <Table.Cell>
                             <span className="text-green-700 text-xs md:text-lg">
@@ -135,7 +136,7 @@ const ResultMatch3 = ({ results }) => {
                         </Table.Row>
                         <Table.Row>
                           <Table.Cell>
-                            <span className="text-xs md:text-lg">mar-can </span>
+                            <span className="text-xs md:text-lg">mar-bel </span>
                           </Table.Cell>
                           <Table.Cell>
                             <span className="text-green-700 text-xs md:text-lg">
@@ -145,7 +146,7 @@ const ResultMatch3 = ({ results }) => {
                         </Table.Row>
                         <Table.Row>
                           <Table.Cell>
-                            <span className="text-xs md:text-lg">cro-bel</span>
+                            <span className="text-xs md:text-lg">cro-can</span>
                           </Table.Cell>
                           <Table.Cell>
                             <span className="text-green-700 text-xs md:text-lg">
@@ -155,7 +156,7 @@ const ResultMatch3 = ({ results }) => {
                         </Table.Row>
                         <Table.Row>
                           <Table.Cell>
-                            <span className="text-xs md:text-lg">sui-ser</span>
+                            <span className="text-xs md:text-lg">sui-bra</span>
                           </Table.Cell>
                           <Table.Cell>
                             <span className="text-green-700 text-xs md:text-lg">
@@ -165,7 +166,7 @@ const ResultMatch3 = ({ results }) => {
                         </Table.Row>
                         <Table.Row>
                           <Table.Cell>
-                            <span className="text-xs md:text-lg">cam-bra</span>
+                            <span className="text-xs md:text-lg">cam-ser</span>
                           </Table.Cell>
                           <Table.Cell>
                             <span className="text-green-700 text-xs md:text-lg">
@@ -175,7 +176,7 @@ const ResultMatch3 = ({ results }) => {
                         </Table.Row>
                         <Table.Row>
                           <Table.Cell>
-                            <span className="text-xs md:text-lg">uru-gha</span>
+                            <span className="text-xs md:text-lg">uru-por</span>
                           </Table.Cell>
                           <Table.Cell>
                             <span className="text-green-700 text-xs md:text-lg">
@@ -185,7 +186,7 @@ const ResultMatch3 = ({ results }) => {
                         </Table.Row>
                         <Table.Row>
                           <Table.Cell>
-                            <span className="text-xs md:text-lg">cor-por</span>
+                            <span className="text-xs md:text-lg">cor-gha</span>
                           </Table.Cell>
                           <Table.Cell>
                             <span className="text-green-700 text-xs md:text-lg">
@@ -201,6 +202,13 @@ const ResultMatch3 = ({ results }) => {
             ))}
           </Grid.Container>
         </div>
+        <div className="text-center pb-8">
+          <Link href="/pronosticos/match3Kids">
+            <a className="text-xl font-semibold text-yellow-400 hover:text-sky-400">
+              Completa la Fecha 3
+            </a>
+          </Link>
+        </div>
       </div>
     </Layout>
   );
@@ -209,7 +217,7 @@ const ResultMatch3 = ({ results }) => {
 export async function getServerSideProps() {
   try {
     await dbConnection();
-    const res = await Match3.find({});
+    const res = await Match2Kids.find({});
     const results = res.map((item) => {
       const result = item.toObject();
       result._id = item.id.toString();
@@ -221,4 +229,4 @@ export async function getServerSideProps() {
   }
 }
 
-export default ResultMatch3;
+export default ResultMatch2Kids;

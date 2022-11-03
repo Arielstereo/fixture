@@ -76,6 +76,13 @@ export default function Layout({ children }) {
               }`}
             >
               <ul className="flex flex-col pt-4 md:flex-row gap-6 text-white font-bold">
+              <li>
+                  <Link href="/kids">
+                    <a className="text-yellow-200 hover:text-sky-400 text-xl pl-4">
+                      Kids
+                    </a>
+                  </Link>
+                </li>
                 <li>
                   <Link href="/positions">
                     <a className="hover:text-sky-400 text-xl pl-4">
@@ -84,9 +91,29 @@ export default function Layout({ children }) {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/results/podium">
-                    <a className="hover:text-sky-400 text-xl pl-4">Podio</a>
-                  </Link>
+                  <Dropdown>
+                  <Dropdown.Button
+                      flat
+                      className="text-white font-bold text-xl pb-3"
+                    >
+                      Podio
+                    </Dropdown.Button>
+                    <Dropdown.Menu
+                      aria-label="Static Actions"
+                      className="bg-sky-300"
+                    >
+                      <Dropdown.Item>
+                        <Link href="/results/podium">
+                          <a className="text-lg font-semibold px-8">Copa Tredi</a>
+                        </Link>
+                      </Dropdown.Item>
+                      <Dropdown.Item>
+                        <Link href="/results/podiumKids">
+                          <a className="text-lg font-semibold px-8">Copa Kids</a>
+                        </Link>
+                      </Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
                 </li>
                 <li>
                   <Dropdown>
@@ -102,17 +129,32 @@ export default function Layout({ children }) {
                     >
                       <Dropdown.Item>
                         <Link href="/results/resultsMatch1">
-                          <a className="text-lg font-semibold px-16">Fecha1</a>
+                          <a className="text-lg text-red-600 font-semibold px-8">Fecha1 | Tredi</a>
+                        </Link>
+                      </Dropdown.Item>
+                      <Dropdown.Item>
+                        <Link href="/results/resultsMatch1Kids">
+                          <a className="text-lg font-semibold px-8">Fecha1 | Kids</a>
                         </Link>
                       </Dropdown.Item>
                       <Dropdown.Item>
                         <Link href="/results/resultsMatch2">
-                          <a className="text-lg font-semibold px-16">Fecha2</a>
+                          <a className="text-lg text-red-600 font-semibold px-8">Fecha2 | Tredi</a>
+                        </Link>
+                      </Dropdown.Item>
+                      <Dropdown.Item>
+                        <Link href="/results/resultsMatch2Kids">
+                          <a className="text-lg font-semibold px-8">Fecha2 | Kids</a>
                         </Link>
                       </Dropdown.Item>
                       <Dropdown.Item>
                         <Link href="/results/resultsMatch3">
-                          <a className="text-lg font-semibold px-16">Fecha3</a>
+                          <a className="text-lg text-red-600 font-semibold px-8">Fecha3 | Tredi</a>
+                        </Link>
+                      </Dropdown.Item>
+                      <Dropdown.Item>
+                        <Link href="/results/resultsMatch3Kids">
+                          <a className="text-lg font-semibold px-8">Fecha3 | Kids</a>
                         </Link>
                       </Dropdown.Item>
                     </Dropdown.Menu>
@@ -132,17 +174,32 @@ export default function Layout({ children }) {
                     >
                       <Dropdown.Item>
                         <Link href="/pronosticos/match1">
-                          <a className="text-lg font-semibold px-16">Fecha1</a>
+                          <a className="text-lg text-red-600 font-semibold px-8">Fecha1 | Tredi</a>
+                        </Link>
+                      </Dropdown.Item>
+                      <Dropdown.Item>
+                        <Link href="/pronosticos/match1Kids">
+                          <a className="text-lg font-semibold px-8">Fecha1 | Kids</a>
                         </Link>
                       </Dropdown.Item>
                       <Dropdown.Item>
                         <Link href="/pronosticos/match2">
-                          <a className="text-lg font-semibold px-16">Fecha2</a>
+                          <a className="text-lg text-red-600 font-semibold px-8">Fecha2 | Tredi</a>
+                        </Link>
+                      </Dropdown.Item>
+                      <Dropdown.Item>
+                        <Link href="/pronosticos/match2Kids">
+                          <a className="text-lg font-semibold px-8">Fecha2 | Kids</a>
                         </Link>
                       </Dropdown.Item>
                       <Dropdown.Item>
                         <Link href="/pronosticos/match3">
-                          <a className="text-lg font-semibold px-16">Fecha3</a>
+                          <a className="text-lg text-red-600 font-semibold px-8">Fecha3 | Tredi</a>
+                        </Link>
+                      </Dropdown.Item>
+                      <Dropdown.Item>
+                        <Link href="/pronosticos/match3Kids">
+                          <a className="text-lg font-semibold px-8">Fecha3 | Kids</a>
                         </Link>
                       </Dropdown.Item>
                     </Dropdown.Menu>
@@ -223,11 +280,18 @@ export default function Layout({ children }) {
             </ul>
           </div>
         </div>
-        <div className="flex py-6 gap-2 text-white font-semibold items-center justify-center">
+        <div className="flex pt-12 gap-4 text-white font-semibold items-center justify-center">
           <span>
             <FaRegCopyright />
           </span>
-          <span>Ariel Martinez</span>
+          <span>Ariel Martinez | 2022</span>
+          <a
+            href="https://www.linkedin.com/in/arielstereo/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaLinkedinIn className="w-5 h-5" />
+          </a>
         </div>
       </footer>
     </div>

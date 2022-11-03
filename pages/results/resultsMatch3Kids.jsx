@@ -1,14 +1,14 @@
 import dbConnection from "../../utils/database";
-import Match3 from "../../models/Match3";
+import Match3Kids from "../../models/Match3Kids";
 import Layout from "../../components/Layout";
-import { Collapse, Table, Grid } from "@nextui-org/react";
+import { Collapse, Grid, Table } from "@nextui-org/react";
 
-const ResultMatch3 = ({ results }) => {
+const ResultMatch3Kids = ({ results }) => {
   return (
     <Layout>
       <div className="p-8">
         <h1 className="text-sky-400 text-3xl md:text-6xl text-center font-bold mt-32 mb-8">
-          Pronósticos Fecha 3
+          Pronósticos Fecha 3 <span className="text-yellow-400">Kids</span>
         </h1>
         <div className="flex flex-wrap mb-32">
           <Grid.Container gap={2} className="mb-64">
@@ -16,7 +16,7 @@ const ResultMatch3 = ({ results }) => {
               <Grid key={item._id}>
                 <Collapse.Group splitted>
                   <Collapse
-                    title={item.name + " " + item.surname}
+                    title={item.name + " " + "/" + " " + item.family}
                     className="uppercase text-xl font-bold w-64 md:w-96"
                   >
                     <Table className="w-full">
@@ -209,7 +209,7 @@ const ResultMatch3 = ({ results }) => {
 export async function getServerSideProps() {
   try {
     await dbConnection();
-    const res = await Match3.find({});
+    const res = await Match3Kids.find({});
     const results = res.map((item) => {
       const result = item.toObject();
       result._id = item.id.toString();
@@ -221,4 +221,4 @@ export async function getServerSideProps() {
   }
 }
 
-export default ResultMatch3;
+export default ResultMatch3Kids;

@@ -1,7 +1,7 @@
 import dbConnection from "../../utils/database";
 import Match2 from "../../models/Match2";
 import Layout from "../../components/Layout";
-import { Collapse, Text, Grid, Badge } from "@nextui-org/react";
+import { Collapse, Table, Grid } from "@nextui-org/react";
 import Link from "next/link";
 
 const ResultMatch2 = ({ results }) => {
@@ -20,184 +20,182 @@ const ResultMatch2 = ({ results }) => {
                     title={item.name + " " + item.surname}
                     className="uppercase text-xl font-bold w-64 md:w-96"
                   >
-                    <Text className="flex flex-col gap-4">
-                      <div className="flex justify-around">
-                        <span className="font-bold">Partido #1</span>
-                        <Badge
-                          enableShadow
-                          disableOutline
-                          color="success"
-                          size="lg"
-                        >
-                          {item.checked}
-                        </Badge>
-                      </div>
-                      <div className="flex justify-around">
-                        <span className="font-bold">Partido #2</span>
-                        <Badge
-                          enableShadow
-                          disableOutline
-                          color="success"
-                          size="lg"
-                        >
-                          {item.checked2}
-                        </Badge>
-                      </div>
-                      <div className="flex justify-around">
-                        <span className="font-bold">Partido #3</span>
-                        <Badge
-                          enableShadow
-                          disableOutline
-                          color="success"
-                          size="lg"
-                        >
-                          {item.checked3}
-                        </Badge>
-                      </div>
-                      <div className="flex justify-around">
-                        <span className="font-bold">Partido #4</span>
-                        <Badge
-                          enableShadow
-                          disableOutline
-                          color="success"
-                          size="lg"
-                        >
-                          {item.checked4}
-                        </Badge>
-                      </div>
-                      <div className="flex justify-around">
-                        <span className="font-bold">Partido #5</span>
-                        <Badge
-                          enableShadow
-                          disableOutline
-                          color="success"
-                          size="lg"
-                        >
-                          {item.checked5}
-                        </Badge>
-                      </div>
-                      <div className="flex justify-around">
-                        <span className="font-bold">Partido #6</span>
-                        <Badge
-                          enableShadow
-                          disableOutline
-                          color="success"
-                          size="lg"
-                        >
-                          {item.checked6}
-                        </Badge>
-                      </div>
-                      <div className="flex justify-around">
-                        <span className="font-bold">Partido #7</span>
-                        <Badge
-                          enableShadow
-                          disableOutline
-                          color="success"
-                          size="lg"
-                        >
-                          {item.checked7}
-                        </Badge>
-                      </div>
-                      <div className="flex justify-around">
-                        <span className="font-bold">Partido #8</span>
-                        <Badge
-                          enableShadow
-                          disableOutline
-                          color="success"
-                          size="lg"
-                        >
-                          {item.checked8}
-                        </Badge>
-                      </div>
-                      <div className="flex justify-around">
-                        <span className="font-bold">Partido #9</span>
-                        <Badge
-                          enableShadow
-                          disableOutline
-                          color="success"
-                          size="lg"
-                        >
-                          {item.checked9}
-                        </Badge>
-                      </div>
-                      <div className="flex justify-around">
-                        <span className="font-bold">Partido #10</span>
-                        <Badge
-                          enableShadow
-                          disableOutline
-                          color="success"
-                          size="lg"
-                        >
-                          {item.checked10}
-                        </Badge>
-                      </div>
-                      <div className="flex justify-around">
-                        <span className="font-bold">Partido #11</span>
-                        <Badge
-                          enableShadow
-                          disableOutline
-                          color="success"
-                          size="lg"
-                        >
-                          {item.checked11}
-                        </Badge>
-                      </div>
-                      <div className="flex justify-around">
-                        <span className="font-bold">Partido #12</span>
-                        <Badge
-                          enableShadow
-                          disableOutline
-                          color="success"
-                          size="lg"
-                        >
-                          {item.checked12}
-                        </Badge>
-                      </div>
-                      <div className="flex justify-around">
-                        <span className="font-bold">Partido #13</span>
-                        <Badge
-                          enableShadow
-                          disableOutline
-                          color="success"
-                          size="lg"
-                        >
-                          {item.checked13}
-                        </Badge>
-                      </div>
-                      <div className="flex justify-around">
-                        <span className="font-bold">Partido #14</span>
-                        <Badge
-                          enableShadow
-                          disableOutline
-                          color="success"
-                          size="lg"
-                        >
-                          {item.checked14}
-                        </Badge>
-                      </div>
-                      <div className="flex justify-around">
-                        <span className="font-bold">Partido #15</span>
-                        <Badge
-                          enableShadow
-                          disableOutline
-                          color="success"
-                          size="lg"
-                        >
-                          {item.checked15}
-                        </Badge>
-                      </div>
-                      <div className="flex justify-around">
-                        <span className="font-bold">Partido #16</span>
-                        <Badge
-                          enableShadow
-                          disableOutline
-                          color="success"
-                          size="lg"
-                        >
-                          {item.checked16}
-                        </Badge>
-                      </div>
-                    </Text>
+                    <Table className="w-full">
+                      <Table.Header>
+                        <Table.Column>
+                          <span className="text-gray-800 text-xs md:text-lg">
+                            Partido
+                          </span>
+                        </Table.Column>
+                        <Table.Column>
+                          <span className="text-gray-800 text-xs md:text-lg">
+                            Resultado
+                          </span>
+                        </Table.Column>
+                      </Table.Header>
+                      <Table.Body>
+                        <Table.Row>
+                          <Table.Cell>
+                            <span className="text-xs md:text-lg">sen-qat</span>
+                          </Table.Cell>
+                          <Table.Cell>
+                            <span className="text-green-700 text-xs md:text-lg">
+                              {item.checked}
+                            </span>
+                          </Table.Cell>
+                        </Table.Row>
+                        <Table.Row>
+                          <Table.Cell>
+                            <span className="text-xs md:text-lg">hol-ecu</span>
+                          </Table.Cell>
+                          <Table.Cell>
+                            <span className="text-green-700 text-xs md:text-lg">
+                              {item.checked2}
+                            </span>
+                          </Table.Cell>
+                        </Table.Row>
+                        <Table.Row>
+                          <Table.Cell>
+                            <span className="text-xs md:text-lg">ing-usa</span>
+                          </Table.Cell>
+                          <Table.Cell>
+                            <span className="text-green-700 text-xs md:text-lg">
+                              {item.checked3}
+                            </span>
+                          </Table.Cell>
+                        </Table.Row>
+                        <Table.Row>
+                          <Table.Cell>
+                            <span className="text-xs md:text-lg">ira-gal</span>
+                          </Table.Cell>
+                          <Table.Cell>
+                            <span className="text-green-700 text-xs md:text-lg">
+                              {item.checked4}
+                            </span>
+                          </Table.Cell>
+                        </Table.Row>
+                        <Table.Row>
+                          <Table.Cell>
+                            <span className="text-xs md:text-lg">arg-mex</span>
+                          </Table.Cell>
+                          <Table.Cell>
+                            <span className="text-green-700 text-xs md:text-lg">
+                              {item.checked5}
+                            </span>
+                          </Table.Cell>
+                        </Table.Row>
+                        <Table.Row>
+                          <Table.Cell>
+                            <span className="text-xs md:text-lg">sau-pol</span>
+                          </Table.Cell>
+                          <Table.Cell>
+                            <span className="text-green-700 text-xs md:text-lg">
+                              {item.checked6}
+                            </span>
+                          </Table.Cell>
+                        </Table.Row>
+                        <Table.Row>
+                          <Table.Cell>
+                            <span className="text-xs md:text-lg">din-fra</span>
+                          </Table.Cell>
+                          <Table.Cell>
+                            <span className="text-green-700 text-xs md:text-lg">
+                              {item.checked7}
+                            </span>
+                          </Table.Cell>
+                        </Table.Row>
+                        <Table.Row>
+                          <Table.Cell>
+                            <span className="text-xs md:text-lg">tun-aus</span>
+                          </Table.Cell>
+                          <Table.Cell>
+                            <span className="text-green-700 text-xs md:text-lg">
+                              {item.checked8}
+                            </span>
+                          </Table.Cell>
+                        </Table.Row>
+                        <Table.Row>
+                          <Table.Cell>
+                            <span className="text-xs md:text-lg">ale-esp</span>
+                          </Table.Cell>
+                          <Table.Cell>
+                            <span className="text-green-700 text-xs md:text-lg">
+                              {item.checked9}
+                            </span>
+                          </Table.Cell>
+                        </Table.Row>
+                        <Table.Row>
+                          <Table.Cell>
+                            <span className="text-xs md:text-lg">jap-cos</span>
+                          </Table.Cell>
+                          <Table.Cell>
+                            <span className="text-green-700 text-xs md:text-lg">
+                              {item.checked10}
+                            </span>
+                          </Table.Cell>
+                        </Table.Row>
+                        <Table.Row>
+                          <Table.Cell>
+                            <span className="text-xs md:text-lg">mar-bel </span>
+                          </Table.Cell>
+                          <Table.Cell>
+                            <span className="text-green-700 text-xs md:text-lg">
+                              {item.checked11}
+                            </span>
+                          </Table.Cell>
+                        </Table.Row>
+                        <Table.Row>
+                          <Table.Cell>
+                            <span className="text-xs md:text-lg">cro-can</span>
+                          </Table.Cell>
+                          <Table.Cell>
+                            <span className="text-green-700 text-xs md:text-lg">
+                              {item.checked12}
+                            </span>
+                          </Table.Cell>
+                        </Table.Row>
+                        <Table.Row>
+                          <Table.Cell>
+                            <span className="text-xs md:text-lg">sui-bra</span>
+                          </Table.Cell>
+                          <Table.Cell>
+                            <span className="text-green-700 text-xs md:text-lg">
+                              {item.checked13}
+                            </span>
+                          </Table.Cell>
+                        </Table.Row>
+                        <Table.Row>
+                          <Table.Cell>
+                            <span className="text-xs md:text-lg">cam-ser</span>
+                          </Table.Cell>
+                          <Table.Cell>
+                            <span className="text-green-700 text-xs md:text-lg">
+                              {item.checked14}
+                            </span>
+                          </Table.Cell>
+                        </Table.Row>
+                        <Table.Row>
+                          <Table.Cell>
+                            <span className="text-xs md:text-lg">uru-por</span>
+                          </Table.Cell>
+                          <Table.Cell>
+                            <span className="text-green-700 text-xs md:text-lg">
+                              {item.checked15}
+                            </span>
+                          </Table.Cell>
+                        </Table.Row>
+                        <Table.Row>
+                          <Table.Cell>
+                            <span className="text-xs md:text-lg">cor-gha</span>
+                          </Table.Cell>
+                          <Table.Cell>
+                            <span className="text-green-700 text-xs md:text-lg">
+                              {item.checked16}
+                            </span>
+                          </Table.Cell>
+                        </Table.Row>
+                      </Table.Body>
+                    </Table>
                   </Collapse>
                 </Collapse.Group>
               </Grid>
