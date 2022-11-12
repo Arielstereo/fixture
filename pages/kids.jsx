@@ -157,7 +157,7 @@ export default function HomeTwo({ kids }) {
               * Puede participar un menor de la familia por integrante de Tredi.
             </span>
             <span className="text-yellow-400 font-semibold">
-              * Ingresa tus datos y elige tu podio antes del 14/11.
+              * Ingresa tus datos y elige tu podio antes del 18/11.
             </span>
             <form
               onSubmit={handleSubmit}

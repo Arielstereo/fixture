@@ -112,7 +112,7 @@ export default function Positions() {
                           size="sm"
                         />
                         <span className="text-sky-400 text-xl md:text-2xl font-semibold">
-                          Participante
+                          Marcelo De Passos
                         </span>
                       </div>
                     </Table.Cell>
@@ -132,7 +132,7 @@ export default function Positions() {
                           size="sm"
                         />
                         <span className="text-sky-400 text-xl md:text-2xl font-semibold">
-                          Participante
+                          Alejandra Quintairos
                         </span>
                       </div>
                     </Table.Cell>
@@ -152,7 +152,7 @@ export default function Positions() {
                           size="sm"
                         />
                         <span className="text-sky-400 text-xl md:text-2xl font-semibold">
-                          Participante
+                         Maximo Coll
                         </span>
                       </div>
                     </Table.Cell>
@@ -166,7 +166,77 @@ export default function Positions() {
                     <Table.Cell>
                       <div className="flex gap-2 items-center">
                         <span className="text-sky-400 text-xl md:text-2xl font-semibold ml-8">
-                          Participante
+                          Joaquin Valese
+                        </span>
+                      </div>
+                    </Table.Cell>
+                    <Table.Cell>
+                      <span className="text-yellow-400 text-xl md:text-2xl font-semibold px-4">
+                        0
+                      </span>
+                    </Table.Cell>
+                  </Table.Row>
+                  <Table.Row>
+                    <Table.Cell>
+                      <div className="flex gap-2 items-center">
+                        <span className="text-sky-400 text-xl md:text-2xl font-semibold ml-8">
+                         Angel Valese
+                        </span>
+                      </div>
+                    </Table.Cell>
+                    <Table.Cell>
+                      <span className="text-yellow-400 text-xl md:text-2xl font-semibold px-4">
+                        0
+                      </span>
+                    </Table.Cell>
+                  </Table.Row>
+                  <Table.Row>
+                    <Table.Cell>
+                      <div className="flex gap-2 items-center">
+                        <span className="text-sky-400 text-xl md:text-2xl font-semibold ml-8">
+                          Adolfo Arrosa
+                        </span>
+                      </div>
+                    </Table.Cell>
+                    <Table.Cell>
+                      <span className="text-yellow-400 text-xl md:text-2xl font-semibold px-4">
+                        0
+                      </span>
+                    </Table.Cell>
+                  </Table.Row>
+                  <Table.Row>
+                    <Table.Cell>
+                      <div className="flex gap-2 items-center">
+                        <span className="text-sky-400 text-xl md:text-2xl font-semibold ml-8">
+                          Victor Gonzalez
+                        </span>
+                      </div>
+                    </Table.Cell>
+                    <Table.Cell>
+                      <span className="text-yellow-400 text-xl md:text-2xl font-semibold px-4">
+                        0
+                      </span>
+                    </Table.Cell>
+                  </Table.Row>
+                  <Table.Row>
+                    <Table.Cell>
+                      <div className="flex gap-2 items-center">
+                        <span className="text-sky-400 text-xl md:text-2xl font-semibold ml-8">
+                          Xoana Albornoz
+                        </span>
+                      </div>
+                    </Table.Cell>
+                    <Table.Cell>
+                      <span className="text-yellow-400 text-xl md:text-2xl font-semibold px-4">
+                        0
+                      </span>
+                    </Table.Cell>
+                  </Table.Row>
+                  <Table.Row>
+                    <Table.Cell>
+                      <div className="flex gap-2 items-center">
+                        <span className="text-sky-400 text-xl md:text-2xl font-semibold ml-8">
+                          Marcela Gulla
                         </span>
                       </div>
                     </Table.Cell>
@@ -217,7 +287,7 @@ export default function Positions() {
                           size="sm"
                         />
                         <span className="text-sky-400 text-xl md:text-2xl font-semibold">
-                          Participante
+                          Joaquin
                         </span>
                       </div>
                     </Table.Cell>
@@ -237,7 +307,7 @@ export default function Positions() {
                           size="sm"
                         />
                         <span className="text-sky-400 text-xl md:text-2xl font-semibold">
-                          Participante
+                          Jazmin
                         </span>
                       </div>
                     </Table.Cell>

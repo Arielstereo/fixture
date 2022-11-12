@@ -11,7 +11,7 @@ const PodiumKids = ({ kids }) => {
         <h1 className="text-sky-400 text-4xl md:text-6xl text-center font-bold py-32">
           Pronósticos Podio <span className="text-yellow-400">Kids</span>
         </h1>
-        <div className="flex flex-col md:flex-wrap md:flex-row mx-auto md:mx-32 gap-6 w-64 md:w-full mb-32">
+        <div className="flex flex-col md:flex-wrap md:flex-row mx-auto md:mx-8 gap-6 w-64 md:w-full mb-32">
           {kids.map((kid) => (
             <Table aria-label="table" key={kid._id} className="z-0 md:p-8">
               <Table.Header>

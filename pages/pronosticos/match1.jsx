@@ -181,7 +181,7 @@ export default function Stage1({ match1 }) {
               Fase de grupos - Fecha 1
             </h3>
             <span className="text-yellow-500 text-lg font-semibold">
-              * Completa todos los resultados antes del 14/11. En esta fase cada
+              * Completa todos los resultados antes del 18/11. En esta fase cada
               acierto vale 1 punto!
             </span>
           </div>

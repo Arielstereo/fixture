@@ -154,7 +154,7 @@ export default function Home({ users }) {
           </div>
           <div className="flex flex-col items-center mt-16 mb-8 mx-8 ">
             <span className="text-yellow-400 font-semibold">
-              * Ingresa tus datos y elige tu podio antes del 14/11.
+              * Ingresa tus datos y elige tu podio antes del 18/11.
             </span>
             <form
               onSubmit={handleSubmit}
