@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Input } from "@nextui-org/react";
+import { Input, Link } from "@nextui-org/react";
 import { useAuth } from "../utils/Store";
 import { useRouter } from "next/router";
 import "animate.css";
@@ -153,10 +153,16 @@ export default function Home({ users }) {
             <Image src="/logo.png" width="400" height="400" alt="logo" />
           </div>
           <div className="flex flex-col items-center mt-16 mb-8 mx-8 ">
-            <span className="text-yellow-400 font-semibold">
+          <Image src="/trofeo.png" width="400" height="400" alt="logo" />
+          <Link href="/pronosticos/match2">
+            <a className="text-xl font-semibold text-yellow-400 hover:text-sky-400">
+              Completa la Fecha 2
+            </a>
+          </Link>
+            {/* <span className="text-yellow-400 font-semibold">
               * Ingresa tus datos y elige tu podio antes del 18/11.
-            </span>
-            <form
+            </span> */}
+            {/* <form
               onSubmit={handleSubmit}
               className="flex flex-col items-center gap-4 mt-4 mb-8"
             >
@@ -247,7 +253,7 @@ export default function Home({ users }) {
                   "Guardar"
                 )}
               </button>
-            </form>
+            </form> */}
           </div>
           <div>
             <Image src="/skipper.png" width="500" height="500" alt="skipper" />

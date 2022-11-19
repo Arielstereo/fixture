@@ -10,6 +10,7 @@ import Kids from "../models/Kids";
 import dbConnection from "../utils/database";
 import Select from "react-select";
 import toast from "react-hot-toast";
+import Link from "next/link";
 
 export default function HomeTwo({ kids }) {
   const {
@@ -153,7 +154,13 @@ export default function HomeTwo({ kids }) {
             <Image src="/logo.png" width="400" height="400" alt="logo" />
           </div>
           <div className="flex flex-col items-center mt-16 mb-8 mx-8 ">
-          <span className="text-yellow-400 font-semibold">
+          <Image src="/trofeo.png" width="400" height="400" alt="logo" />
+          <Link href="/pronosticos/match2Kids">
+            <a className="text-xl font-semibold text-yellow-400 hover:text-sky-400">
+              Completa la Fecha 2
+            </a>
+          </Link>
+          {/* <span className="text-yellow-400 font-semibold">
               * Puede participar un menor de la familia por integrante de Tredi.
             </span>
             <span className="text-yellow-400 font-semibold">
@@ -250,7 +257,7 @@ export default function HomeTwo({ kids }) {
                   "Guardar"
                 )}
               </button>
-            </form>
+            </form> */}
           </div>
           <div>
             <Image src="/mascota.png" width="380" height="380" alt="skipper" />
