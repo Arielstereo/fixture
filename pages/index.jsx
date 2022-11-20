@@ -120,7 +120,8 @@ export default function Home({ users }) {
           border: "2px solid #fff",
         },
       });
-    } if(name && surname && password && first && second && third && !duplicate) {
+    }
+    if (name && surname && password && first && second && third && !duplicate) {
       const userSaved = await data(newUser);
       console.log(userSaved);
       setIsSubmit(true);
@@ -152,13 +153,22 @@ export default function Home({ users }) {
           <div className="mt-8 mx-auto">
             <Image src="/logo.png" width="400" height="400" alt="logo" />
           </div>
-          <div className="flex flex-col items-center mt-16 mb-8 mx-8 ">
-          <Image src="/trofeo.png" width="400" height="400" alt="logo" />
-          <Link href="/pronosticos/match2">
-            <a className="text-xl font-semibold text-yellow-400 hover:text-sky-400">
-              Completa la Fecha 2
-            </a>
-          </Link>
+          <div className="flex flex-col gap-32 items-center mt-16 mb-8 mx-8 ">
+            <h2 className="text-5xl font-semibold text-yellow-400">Resultados <span className="text-sky-400">Fecha 1</span> </h2>
+            <div className="flex gap-4">
+              <Image src="/qat.jpg" alt="qat" width="40" height="40" className="rounded-full"/>
+              <h4 className="text-2xl font-semibold text-white">Qatar</h4>
+              <span className="text-2xl text-sky-400 font-semibold">0</span>
+              <span className="text-2xl text-sky-400 font-semibold"> - </span>
+              <span className="text-2xl text-sky-400 font-semibold">2</span>
+              <h4 className="text-2xl font-semibold text-white">Ecuador</h4>
+              <Image src="/ecu.jpg" alt="ecu" width="40" height="40" className="rounded-full"/>
+            </div>
+            <Link href="/pronosticos/match2">
+              <a className="text-xl font-semibold text-yellow-400 hover:text-sky-400">
+                Completa la Fecha 2
+              </a>
+            </Link>
             {/* <span className="text-yellow-400 font-semibold">
               * Ingresa tus datos y elige tu podio antes del 18/11.
             </span> */}

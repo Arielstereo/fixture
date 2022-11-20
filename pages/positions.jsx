@@ -12,6 +12,65 @@ import Layout from "../components/Layout";
 export default function Positions() {
   const { setVisible, bindings } = useModal();
 
+  const users = [
+    {
+      name: "Marcelo De Passos",
+      points: 1,
+    },
+    {
+      name: "Alejandra Quintairos",
+      points: 1,
+    },
+    {
+      name: "Joaquin Valese",
+      points: 1,
+    },
+    {
+      name: "Adolfo Arrosa",
+      points: 1,
+    },
+    {
+      name: "Victor Gonzalez",
+      points: 1,
+    },
+    {
+      name: "Marcela Gulla",
+      points: 0,
+    },
+    {
+      name: "Xoana Albornoz",
+      points: 0,
+    },
+    {
+      name: "Carlos Arrosa",
+      points: 0,
+    },
+    {
+      name: "Angel Valese",
+      points: 0,
+    },
+    {
+      name: "Maximo Coll",
+      points: 0,
+    },
+  ];
+
+  const kids = [
+    { 
+      name: "Joaquín",
+      points: 1
+    },
+    { 
+      name: "Jazmín",
+      points: 1
+    },
+    { 
+      name: "Lautaro",
+      points: 1
+    },
+
+  ]
+
   return (
     <Layout>
       <div className="p-8">
@@ -102,150 +161,22 @@ export default function Positions() {
                   </Table.Column>
                 </Table.Header>
                 <Table.Body>
-                  <Table.Row>
-                    <Table.Cell>
-                      <div className="flex gap-2 items-center">
-                        <Avatar
-                          text="1"
-                          color="gradient"
-                          textColor="white"
-                          size="sm"
-                        />
-                        <span className="text-sky-400 text-xl md:text-2xl font-semibold">
-                          Marcelo De Passos
+                  {users.map(({ index, name, points }) => (
+                    <Table.Row key={index}>
+                      <Table.Cell>
+                        <div className="flex gap-2 items-center">
+                          <span className="text-sky-400 text-xl md:text-2xl font-semibold">
+                            {name}
+                          </span>
+                        </div>
+                      </Table.Cell>
+                      <Table.Cell>
+                        <span className="text-yellow-400 text-xl md:text-2xl font-semibold px-4">
+                          {points}
                         </span>
-                      </div>
-                    </Table.Cell>
-                    <Table.Cell>
-                      <span className="text-yellow-400 text-xl md:text-2xl font-semibold px-4">
-                        0
-                      </span>
-                    </Table.Cell>
-                  </Table.Row>
-                  <Table.Row>
-                    <Table.Cell>
-                      <div className="flex gap-2 items-center">
-                        <Avatar
-                          text="2"
-                          color="success"
-                          textColor="white"
-                          size="sm"
-                        />
-                        <span className="text-sky-400 text-xl md:text-2xl font-semibold">
-                          Alejandra Quintairos
-                        </span>
-                      </div>
-                    </Table.Cell>
-                    <Table.Cell>
-                      <span className="text-yellow-400 text-xl md:text-2xl font-semibold px-4">
-                        0
-                      </span>
-                    </Table.Cell>
-                  </Table.Row>
-                  <Table.Row>
-                    <Table.Cell>
-                      <div className="flex gap-2 items-center">
-                        <Avatar
-                          text="3"
-                          color="warning"
-                          textColor="white"
-                          size="sm"
-                        />
-                        <span className="text-sky-400 text-xl md:text-2xl font-semibold">
-                         Maximo Coll
-                        </span>
-                      </div>
-                    </Table.Cell>
-                    <Table.Cell>
-                      <span className="text-yellow-400 text-xl md:text-2xl font-semibold px-4">
-                        0
-                      </span>
-                    </Table.Cell>
-                  </Table.Row>
-                  <Table.Row>
-                    <Table.Cell>
-                      <div className="flex gap-2 items-center">
-                        <span className="text-sky-400 text-xl md:text-2xl font-semibold ml-8">
-                          Joaquin Valese
-                        </span>
-                      </div>
-                    </Table.Cell>
-                    <Table.Cell>
-                      <span className="text-yellow-400 text-xl md:text-2xl font-semibold px-4">
-                        0
-                      </span>
-                    </Table.Cell>
-                  </Table.Row>
-                  <Table.Row>
-                    <Table.Cell>
-                      <div className="flex gap-2 items-center">
-                        <span className="text-sky-400 text-xl md:text-2xl font-semibold ml-8">
-                         Angel Valese
-                        </span>
-                      </div>
-                    </Table.Cell>
-                    <Table.Cell>
-                      <span className="text-yellow-400 text-xl md:text-2xl font-semibold px-4">
-                        0
-                      </span>
-                    </Table.Cell>
-                  </Table.Row>
-                  <Table.Row>
-                    <Table.Cell>
-                      <div className="flex gap-2 items-center">
-                        <span className="text-sky-400 text-xl md:text-2xl font-semibold ml-8">
-                          Adolfo Arrosa
-                        </span>
-                      </div>
-                    </Table.Cell>
-                    <Table.Cell>
-                      <span className="text-yellow-400 text-xl md:text-2xl font-semibold px-4">
-                        0
-                      </span>
-                    </Table.Cell>
-                  </Table.Row>
-                  <Table.Row>
-                    <Table.Cell>
-                      <div className="flex gap-2 items-center">
-                        <span className="text-sky-400 text-xl md:text-2xl font-semibold ml-8">
-                          Victor Gonzalez
-                        </span>
-                      </div>
-                    </Table.Cell>
-                    <Table.Cell>
-                      <span className="text-yellow-400 text-xl md:text-2xl font-semibold px-4">
-                        0
-                      </span>
-                    </Table.Cell>
-                  </Table.Row>
-                  <Table.Row>
-                    <Table.Cell>
-                      <div className="flex gap-2 items-center">
-                        <span className="text-sky-400 text-xl md:text-2xl font-semibold ml-8">
-                          Xoana Albornoz
-                        </span>
-                      </div>
-                    </Table.Cell>
-                    <Table.Cell>
-                      <span className="text-yellow-400 text-xl md:text-2xl font-semibold px-4">
-                        0
-                      </span>
-                    </Table.Cell>
-                  </Table.Row>
-                  <Table.Row>
-                    <Table.Cell>
-                      <div className="flex gap-2 items-center">
-                        <span className="text-sky-400 text-xl md:text-2xl font-semibold ml-8">
-                          Marcela Gulla
-                        </span>
-                      </div>
-                    </Table.Cell>
-                    <Table.Cell>
-                      <span className="text-yellow-400 text-xl md:text-2xl font-semibold px-4">
-                        0
-                      </span>
-                    </Table.Cell>
-                  </Table.Row>
+                      </Table.Cell>
+                    </Table.Row>
+                  ))}
                 </Table.Body>
               </Table>
             </div>
@@ -277,80 +208,26 @@ export default function Positions() {
                   </Table.Column>
                 </Table.Header>
                 <Table.Body>
-                  <Table.Row>
+                  {
+                    kids.map(({index, name, points}) => (
+                  <Table.Row key={index}>
                     <Table.Cell>
                       <div className="flex gap-2 items-center">
-                        <Avatar
-                          text="1"
-                          color="gradient"
-                          textColor="white"
-                          size="sm"
-                        />
+                      
                         <span className="text-sky-400 text-xl md:text-2xl font-semibold">
-                          Joaquin
+                          {name}
                         </span>
                       </div>
                     </Table.Cell>
                     <Table.Cell>
                       <span className="text-yellow-400 text-xl md:text-2xl font-semibold px-4">
-                        0
+                        {points}
                       </span>
                     </Table.Cell>
                   </Table.Row>
-                  <Table.Row>
-                    <Table.Cell>
-                      <div className="flex gap-2 items-center">
-                        <Avatar
-                          text="2"
-                          color="success"
-                          textColor="white"
-                          size="sm"
-                        />
-                        <span className="text-sky-400 text-xl md:text-2xl font-semibold">
-                          Jazmin
-                        </span>
-                      </div>
-                    </Table.Cell>
-                    <Table.Cell>
-                      <span className="text-yellow-400 text-xl md:text-2xl font-semibold px-4">
-                        0
-                      </span>
-                    </Table.Cell>
-                  </Table.Row>
-                  <Table.Row>
-                    <Table.Cell>
-                      <div className="flex gap-2 items-center">
-                        <Avatar
-                          text="3"
-                          color="warning"
-                          textColor="white"
-                          size="sm"
-                        />
-                        <span className="text-sky-400 text-xl md:text-2xl font-semibold">
-                          Participante
-                        </span>
-                      </div>
-                    </Table.Cell>
-                    <Table.Cell>
-                      <span className="text-yellow-400 text-xl md:text-2xl font-semibold px-4">
-                        0
-                      </span>
-                    </Table.Cell>
-                  </Table.Row>
-                  <Table.Row>
-                    <Table.Cell>
-                      <div className="flex gap-2 items-center">
-                        <span className="text-sky-400 text-xl md:text-2xl font-semibold ml-8">
-                          Participante
-                        </span>
-                      </div>
-                    </Table.Cell>
-                    <Table.Cell>
-                      <span className="text-yellow-400 text-xl md:text-2xl font-semibold px-4">
-                        0
-                      </span>
-                    </Table.Cell>
-                  </Table.Row>
+
+                    ))
+                  }
                 </Table.Body>
               </Table>
             </div>
