@@ -15,39 +15,39 @@ export default function Positions() {
   const users = [
     {
       name: "Marcelo De Passos",
-      points: 1,
+      points: 2,
     },
     {
       name: "Alejandra Quintairos",
-      points: 1,
+      points: 4,
     },
     {
       name: "Joaquin Valese",
-      points: 1,
+      points: 3,
     },
     {
       name: "Adolfo Arrosa",
-      points: 1,
+      points: 3,
     },
     {
       name: "Victor Gonzalez",
-      points: 1,
+      points: 4,
     },
     {
       name: "Marcela Gulla",
-      points: 0,
+      points: 2,
     },
     {
       name: "Xoana Albornoz",
-      points: 0,
+      points: 2,
     },
     {
       name: "Carlos Arrosa",
-      points: 0,
+      points: 2,
     },
     {
       name: "Angel Valese",
-      points: 0,
+      points: 2,
     },
     {
       name: "Maximo Coll",
@@ -58,11 +58,11 @@ export default function Positions() {
   const kids = [
     { 
       name: "Joaquín",
-      points: 1
+      points: 2
     },
     { 
       name: "Jazmín",
-      points: 1
+      points: 4
     },
     { 
       name: "Lautaro",
@@ -161,7 +161,7 @@ export default function Positions() {
                   </Table.Column>
                 </Table.Header>
                 <Table.Body>
-                  {users.map(({ index, name, points }) => (
+                  {users.sort((a, b) => (a.points <  b.points)).map(({ index, name, points }) => (
                     <Table.Row key={index}>
                       <Table.Cell>
                         <div className="flex gap-2 items-center">
@@ -209,7 +209,7 @@ export default function Positions() {
                 </Table.Header>
                 <Table.Body>
                   {
-                    kids.map(({index, name, points}) => (
+                    kids.sort((a, b) => (a.points <  b.points)).map(({index, name, points}) => (
                   <Table.Row key={index}>
                     <Table.Cell>
                       <div className="flex gap-2 items-center">
