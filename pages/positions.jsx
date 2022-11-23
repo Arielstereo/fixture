@@ -14,62 +14,70 @@ export default function Positions() {
 
   const users = [
     {
-      name: "Marcelo De Passos",
-      points: 2,
+      name: "Victor Gonzalez",
+      points: 6,
     },
     {
       name: "Alejandra Quintairos",
-      points: 4,
-    },
-    {
-      name: "Joaquin Valese",
-      points: 3,
+      points: 5,
     },
     {
       name: "Adolfo Arrosa",
-      points: 3,
-    },
-    {
-      name: "Victor Gonzalez",
-      points: 4,
-    },
-    {
-      name: "Marcela Gulla",
-      points: 2,
+      points: 5,
     },
     {
       name: "Xoana Albornoz",
-      points: 2,
+      points: 4,
     },
+
     {
-      name: "Carlos Arrosa",
-      points: 2,
+      name: "Joaquin Valese",
+      points: 4,
     },
     {
       name: "Angel Valese",
-      points: 2,
+      points: 4,
     },
     {
+      name: "Marcelo De Passos",
+      points: 3,
+    },
+
+    {
+      name: "Marcela Gulla",
+      points: 3,
+    },
+
+    {
+      name: "Carlos Arrosa",
+      points: 3,
+    },
+
+    {
       name: "Maximo Coll",
+      points: 0,
+    },
+    {
+      name: "Eduardo Avila",
       points: 0,
     },
   ];
 
   const kids = [
-    { 
-      name: "Joaquín",
-      points: 2
-    },
-    { 
+    {
       name: "Jazmín",
-      points: 4
+      points: 5,
     },
-    { 
-      name: "Lautaro",
-      points: 1
+    {
+      name: "Joaquín",
+      points: 4,
     },
 
-  ]
+    {
+      name: "Lautaro",
+      points: 1,
+    },
+  ];
 
   return (
     <Layout>
@@ -161,22 +169,24 @@ export default function Positions() {
                   </Table.Column>
                 </Table.Header>
                 <Table.Body>
-                  {users.sort((a, b) => (a.points <  b.points)).map(({ index, name, points }) => (
-                    <Table.Row key={index}>
-                      <Table.Cell>
-                        <div className="flex gap-2 items-center">
-                          <span className="text-sky-400 text-xl md:text-2xl font-semibold">
-                            {name}
+                  {users
+                    .sort((a, b) => a.points < b.points)
+                    .map(({ index, name, points }) => (
+                      <Table.Row key={index}>
+                        <Table.Cell>
+                          <div className="flex gap-2 items-center">
+                            <span className="text-sky-400 text-xl md:text-2xl font-semibold">
+                              {name}
+                            </span>
+                          </div>
+                        </Table.Cell>
+                        <Table.Cell>
+                          <span className="text-yellow-400 text-xl md:text-2xl font-semibold px-4">
+                            {points}
                           </span>
-                        </div>
-                      </Table.Cell>
-                      <Table.Cell>
-                        <span className="text-yellow-400 text-xl md:text-2xl font-semibold px-4">
-                          {points}
-                        </span>
-                      </Table.Cell>
-                    </Table.Row>
-                  ))}
+                        </Table.Cell>
+                      </Table.Row>
+                    ))}
                 </Table.Body>
               </Table>
             </div>
@@ -208,26 +218,24 @@ export default function Positions() {
                   </Table.Column>
                 </Table.Header>
                 <Table.Body>
-                  {
-                    kids.sort((a, b) => (a.points <  b.points)).map(({index, name, points}) => (
-                  <Table.Row key={index}>
-                    <Table.Cell>
-                      <div className="flex gap-2 items-center">
-                      
-                        <span className="text-sky-400 text-xl md:text-2xl font-semibold">
-                          {name}
-                        </span>
-                      </div>
-                    </Table.Cell>
-                    <Table.Cell>
-                      <span className="text-yellow-400 text-xl md:text-2xl font-semibold px-4">
-                        {points}
-                      </span>
-                    </Table.Cell>
-                  </Table.Row>
-
-                    ))
-                  }
+                  {kids
+                    .sort((a, b) => a.points < b.points)
+                    .map(({ index, name, points }) => (
+                      <Table.Row key={index}>
+                        <Table.Cell>
+                          <div className="flex gap-2 items-center">
+                            <span className="text-sky-400 text-xl md:text-2xl font-semibold">
+                              {name}
+                            </span>
+                          </div>
+                        </Table.Cell>
+                        <Table.Cell>
+                          <span className="text-yellow-400 text-xl md:text-2xl font-semibold px-4">
+                            {points}
+                          </span>
+                        </Table.Cell>
+                      </Table.Row>
+                    ))}
                 </Table.Body>
               </Table>
             </div>
