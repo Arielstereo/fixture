@@ -227,6 +227,42 @@ export default function Home({ users }) {
               <h4 className="text-2xl font-semibold text-white">Australia</h4>
               <Image src="/aus.png" alt="ecu" width="40" height="40" className="rounded-full"/>
             </div>
+            <div className="flex gap-4">
+              <Image src="/mar.gif" alt="qat" width="40" height="40" className="rounded-full"/>
+              <h4 className="text-2xl font-semibold text-white">Marruecos</h4>
+              <span className="text-2xl text-sky-400 font-semibold">0</span>
+              <span className="text-2xl text-sky-400 font-semibold"> - </span>
+              <span className="text-2xl text-sky-400 font-semibold">0</span>
+              <h4 className="text-2xl font-semibold text-white">Croacia</h4>
+              <Image src="/cro.png" alt="ecu" width="40" height="40" className="rounded-full"/>
+            </div>
+            <div className="flex gap-4">
+              <Image src="/bel.gif" alt="qat" width="40" height="40" className="rounded-full"/>
+              <h4 className="text-2xl font-semibold text-white">Belgica</h4>
+              <span className="text-2xl text-sky-400 font-semibold">1</span>
+              <span className="text-2xl text-sky-400 font-semibold"> - </span>
+              <span className="text-2xl text-sky-400 font-semibold">0</span>
+              <h4 className="text-2xl font-semibold text-white">Canada</h4>
+              <Image src="/can.png" alt="ecu" width="40" height="40" className="rounded-full"/>
+            </div>   <div className="flex gap-4">
+              <Image src="/ale.jpg" alt="qat" width="40" height="40" className="rounded-full"/>
+              <h4 className="text-2xl font-semibold text-white">Alemania</h4>
+              <span className="text-2xl text-sky-400 font-semibold">1</span>
+              <span className="text-2xl text-sky-400 font-semibold"> - </span>
+              <span className="text-2xl text-sky-400 font-semibold">2</span>
+              <h4 className="text-2xl font-semibold text-white">Japon</h4>
+              <Image src="/jap.jpg" alt="ecu" width="40" height="40" className="rounded-full"/>
+            </div>
+            <div className="flex gap-4">
+              <Image src="/esp.png" alt="qat" width="40" height="40" className="rounded-full"/>
+              <h4 className="text-2xl font-semibold text-white">España</h4>
+              <span className="text-2xl text-sky-400 font-semibold">7</span>
+              <span className="text-2xl text-sky-400 font-semibold"> - </span>
+              <span className="text-2xl text-sky-400 font-semibold">0</span>
+              <h4 className="text-2xl font-semibold text-white">CostaRica</h4>
+              <Image src="/cos.png" alt="ecu" width="40" height="40" className="rounded-full"/>
+            </div>
+
             <Link href="/pronosticos/match2">
               <a className="text-xl font-semibold text-yellow-400 hover:text-sky-400">
                 Completa la Fecha 2
