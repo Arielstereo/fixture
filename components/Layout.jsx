@@ -172,7 +172,7 @@ export default function Layout({ children }) {
                       aria-label="Static Actions"
                       className="bg-sky-300"
                     >
-                      <Dropdown.Item>
+                      {/* <Dropdown.Item>
                         <Link href="/pronosticos/match1">
                           <a className="text-lg text-red-600 font-semibold px-8">Fecha1 | Tredi</a>
                         </Link>
@@ -191,7 +191,7 @@ export default function Layout({ children }) {
                         <Link href="/pronosticos/match2Kids">
                           <a className="text-lg font-semibold px-8">Fecha2 | Kids</a>
                         </Link>
-                      </Dropdown.Item>
+                      </Dropdown.Item> */}
                       <Dropdown.Item>
                         <Link href="/pronosticos/match3">
                           <a className="text-lg text-red-600 font-semibold px-8">Fecha3 | Tredi</a>
