@@ -191,43 +191,43 @@ export default function Home({ users }) {
               <h4 className="text-2xl font-semibold text-white">Gales</h4>
               <Image src="/gal.webp" alt="ecu" width="40" height="40" className="rounded-full"/>
             </div>
-            {/* <div className="flex gap-4">
+            <div className="flex gap-4">
               <Image src="/arg.jpg" alt="qat" width="40" height="40" className="rounded-full"/>
               <h4 className="text-2xl font-semibold text-white">Argentina</h4>
-              <span className="text-2xl text-sky-400 font-semibold">1</span>
-              <span className="text-2xl text-sky-400 font-semibold"> - </span>
               <span className="text-2xl text-sky-400 font-semibold">2</span>
-              <h4 className="text-2xl font-semibold text-white">Arabia</h4>
-              <Image src="/ara.png" alt="ecu" width="40" height="40" className="rounded-full"/>
+              <span className="text-2xl text-sky-400 font-semibold"> - </span>
+              <span className="text-2xl text-sky-400 font-semibold">0</span>
+              <h4 className="text-2xl font-semibold text-white">Mexico</h4>
+              <Image src="/mex.jpg" alt="ecu" width="40" height="40" className="rounded-full"/>
             </div>
             <div className="flex gap-4">
-              <Image src="/mex.jpg" alt="qat" width="40" height="40" className="rounded-full"/>
-              <h4 className="text-2xl font-semibold text-white">Mexico</h4>
+              <Image src="/ara.png" alt="qat" width="40" height="40" className="rounded-full"/>
+              <h4 className="text-2xl font-semibold text-white">A.Saudita</h4>
               <span className="text-2xl text-sky-400 font-semibold">0</span>
               <span className="text-2xl text-sky-400 font-semibold"> - </span>
-              <span className="text-2xl text-sky-400 font-semibold">0</span>
+              <span className="text-2xl text-sky-400 font-semibold">2</span>
               <h4 className="text-2xl font-semibold text-white">Polonia</h4>
               <Image src="/pol.jpg" alt="ecu" width="40" height="40" className="rounded-full"/>
             </div>
             <div className="flex gap-4">
               <Image src="/din.jpg" alt="qat" width="40" height="40" className="rounded-full"/>
               <h4 className="text-2xl font-semibold text-white">Dinamarca</h4>
-              <span className="text-2xl text-sky-400 font-semibold">0</span>
+              <span className="text-2xl text-sky-400 font-semibold">1</span>
               <span className="text-2xl text-sky-400 font-semibold"> - </span>
-              <span className="text-2xl text-sky-400 font-semibold">0</span>
-              <h4 className="text-2xl font-semibold text-white">Tunez</h4>
-              <Image src="/tun.jpg" alt="ecu" width="40" height="40" className="rounded-full"/>
+              <span className="text-2xl text-sky-400 font-semibold">2</span>
+              <h4 className="text-2xl font-semibold text-white">Francia</h4>
+              <Image src="/fra.jpg" alt="ecu" width="40" height="40" className="rounded-full"/>
             </div>
             <div className="flex gap-4">
-              <Image src="/fra.jpg" alt="qat" width="40" height="40" className="rounded-full"/>
-              <h4 className="text-2xl font-semibold text-white">Francia</h4>
-              <span className="text-2xl text-sky-400 font-semibold">4</span>
+              <Image src="/tun.jpg" alt="qat" width="40" height="40" className="rounded-full"/>
+              <h4 className="text-2xl font-semibold text-white">Tunez</h4>
+              <span className="text-2xl text-sky-400 font-semibold">0</span>
               <span className="text-2xl text-sky-400 font-semibold"> - </span>
               <span className="text-2xl text-sky-400 font-semibold">1</span>
               <h4 className="text-2xl font-semibold text-white">Australia</h4>
               <Image src="/aus.png" alt="ecu" width="40" height="40" className="rounded-full"/>
             </div>
-            <div className="flex gap-4">
+          { /* <div className="flex gap-4">
               <Image src="/mar.gif" alt="qat" width="40" height="40" className="rounded-full"/>
               <h4 className="text-2xl font-semibold text-white">Marruecos</h4>
               <span className="text-2xl text-sky-400 font-semibold">0</span>
