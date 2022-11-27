@@ -227,21 +227,21 @@ export default function Home({ users }) {
               <h4 className="text-2xl font-semibold text-white">Australia</h4>
               <Image src="/aus.png" alt="ecu" width="40" height="40" className="rounded-full"/>
             </div>
-          { /* <div className="flex gap-4">
+          <div className="flex gap-4">
               <Image src="/mar.gif" alt="qat" width="40" height="40" className="rounded-full"/>
               <h4 className="text-2xl font-semibold text-white">Marruecos</h4>
-              <span className="text-2xl text-sky-400 font-semibold">0</span>
+              <span className="text-2xl text-sky-400 font-semibold">2</span>
               <span className="text-2xl text-sky-400 font-semibold"> - </span>
               <span className="text-2xl text-sky-400 font-semibold">0</span>
-              <h4 className="text-2xl font-semibold text-white">Croacia</h4>
-              <Image src="/cro.png" alt="ecu" width="40" height="40" className="rounded-full"/>
+              <h4 className="text-2xl font-semibold text-white">Belgica</h4>
+              <Image src="/bel.gif" alt="ecu" width="40" height="40" className="rounded-full"/>
             </div>
             <div className="flex gap-4">
-              <Image src="/bel.gif" alt="qat" width="40" height="40" className="rounded-full"/>
-              <h4 className="text-2xl font-semibold text-white">Belgica</h4>
-              <span className="text-2xl text-sky-400 font-semibold">1</span>
+              <Image src="/cro.png" alt="qat" width="40" height="40" className="rounded-full"/>
+              <h4 className="text-2xl font-semibold text-white">Croacia</h4>
+              <span className="text-2xl text-sky-400 font-semibold">4</span>
               <span className="text-2xl text-sky-400 font-semibold"> - </span>
-              <span className="text-2xl text-sky-400 font-semibold">0</span>
+              <span className="text-2xl text-sky-400 font-semibold">1</span>
               <h4 className="text-2xl font-semibold text-white">Canada</h4>
               <Image src="/can.png" alt="ecu" width="40" height="40" className="rounded-full"/>
             </div>   <div className="flex gap-4">
@@ -249,21 +249,21 @@ export default function Home({ users }) {
               <h4 className="text-2xl font-semibold text-white">Alemania</h4>
               <span className="text-2xl text-sky-400 font-semibold">1</span>
               <span className="text-2xl text-sky-400 font-semibold"> - </span>
-              <span className="text-2xl text-sky-400 font-semibold">2</span>
-              <h4 className="text-2xl font-semibold text-white">Japon</h4>
-              <Image src="/jap.jpg" alt="ecu" width="40" height="40" className="rounded-full"/>
+              <span className="text-2xl text-sky-400 font-semibold">1</span>
+              <h4 className="text-2xl font-semibold text-white">España</h4>
+              <Image src="/esp.png" alt="ecu" width="40" height="40" className="rounded-full"/>
             </div>
             
             <div className="flex gap-4">
-              <Image src="/esp.png" alt="qat" width="40" height="40" className="rounded-full"/>
-              <h4 className="text-2xl font-semibold text-white">España</h4>
-              <span className="text-2xl text-sky-400 font-semibold">7</span>
-              <span className="text-2xl text-sky-400 font-semibold"> - </span>
+              <Image src="/jap.jpg" alt="qat" width="40" height="40" className="rounded-full"/>
+              <h4 className="text-2xl font-semibold text-white">Japon</h4>
               <span className="text-2xl text-sky-400 font-semibold">0</span>
+              <span className="text-2xl text-sky-400 font-semibold"> - </span>
+              <span className="text-2xl text-sky-400 font-semibold">1</span>
               <h4 className="text-2xl font-semibold text-white">CostaRica</h4>
               <Image src="/cos.png" alt="ecu" width="40" height="40" className="rounded-full"/>
             </div>
-            <div className="flex gap-4">
+            { /* <div className="flex gap-4">
               <Image src="/bra.png" alt="qat" width="40" height="40" className="rounded-full"/>
               <h4 className="text-2xl font-semibold text-white">Brasil</h4>
               <span className="text-2xl text-sky-400 font-semibold">2</span>
