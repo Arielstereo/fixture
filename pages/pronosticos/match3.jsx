@@ -953,12 +953,10 @@ export default function Stage3({ match3 }) {
               </span>
             )}
             <button
-              disabled={isSubmit}
-              className={
-                isSubmit
-                  ? "text-gray-100 font-semibold bg-gray-600 border-2 border-white py-2 px-16 rounded-lg mx-12 mt-4"
-                  : "text-gray-800 font-semibold bg-yellow-400 hover:bg-transparent hover:text-white border-2 border-white py-2 px-16 rounded-lg mx-12 mt-4"
-              }
+              disabled = "true"
+              className="text-gray-100 font-semibold bg-gray-600 border-2 border-white py-2 px-16 rounded-lg mx-12 mt-4"
+              // className= {isSubmit ?("text-gray-100 font-semibold bg-gray-600 border-2 border-white py-2 px-16 rounded-lg mx-12 mt-4"):("text-gray-800 font-semibold bg-yellow-400 hover:bg-transparent hover:text-white border-2 border-white py-2 px-16 rounded-lg mx-12 mt-4")}
+    
             >
               {isSubmit ? (
                 <div className="flex gap-6">
