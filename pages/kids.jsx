@@ -155,109 +155,11 @@ export default function HomeTwo({ kids }) {
           </div>
           <div className="flex flex-col items-center mt-16 mb-8 mx-8 ">
           <Image src="/trofeo.png" width="400" height="400" alt="logo" />
-          <Link href="/pronosticos/match3Kids">
+          <Link href="/pronosticos/octavosKids">
             <a className="text-xl font-semibold text-yellow-400 hover:text-sky-400">
-              Completa la Fecha 3
+              Completa los octavos de final
             </a>
           </Link>
-          {/* <span className="text-yellow-400 font-semibold">
-              * Puede participar un menor de la familia por integrante de Tredi.
-            </span>
-            <span className="text-yellow-400 font-semibold">
-              * Ingresa tus datos y elige tu podio antes del 18/11.
-            </span>
-            <form
-              onSubmit={handleSubmit}
-              className="flex flex-col items-center gap-4 mt-4 mb-8"
-            >
-              <Input
-                rounded
-                bordered
-                size="lg"
-                label="Nombre del menor"
-                placeholder="Ingrese su nombre"
-                color="warning"
-                className="bg-white md:w-80"
-                onChange={(e) => setName(e.target.value)}
-              />
-              <Input
-                rounded
-                bordered
-                size="lg"
-                label="Nombre del familiar"
-                placeholder="Ingrese el nombre"
-                color="warning"
-                className="bg-white md:w-80"
-                onChange={(e) => setFamily(e.target.value)}
-              />
-
-              <Input
-                rounded
-                bordered
-                size="lg"
-                label="Contraseña (DNI Adulto)"
-                placeholder="Ingrese su DNI"
-                color="warning"
-                className="bg-white md:w-80"
-                type="password"
-                onChange={(e) => setPassword(e.target.value)}
-              />
-              {message && (
-                <span className="text-yellow-500 font-semibold text-center">
-                  {message}
-                </span>
-              )}
-              <div className="flex flex-col md:flex-row mt-4 gap-4">
-                <div className="flex flex-col gap-2">
-                  <Select
-                    defaultValue={{ value: "", label: "Campeón" }}
-                    options={options}
-                    onChange={(e) => setFirst(e.value)}
-                  />
-                  <span className="text-yellow-500 font-semibold text-center">
-                    30 puntos
-                  </span>
-                </div>
-                <div className="flex flex-col gap-2">
-                  <Select
-                    defaultValue={{ value: "", label: "Subcampeón" }}
-                    options={options}
-                    onChange={(e) => setSecond(e.value)}
-                  />
-                  <span className="text-yellow-500 font-semibold text-center">
-                    20 puntos
-                  </span>
-                </div>
-                <div className="flex flex-col gap-2">
-                  <Select
-                    defaultValue={{ value: "", label: "Tercer puesto" }}
-                    options={options}
-                    onChange={(e) => setThird(e.value)}
-                  />
-                  <span className="text-yellow-500 font-semibold text-center">
-                    10 puntos
-                  </span>
-                </div>
-              </div>
-              {error && (
-                <span className="text-yellow-500 font-semibold text-center">
-                  {error}
-                </span>
-              )}
-              <button
-                disabled={isSubmit}
-                className= {isSubmit ?("text-gray-100 font-semibold bg-gray-600 border-2 border-white py-2 px-16 rounded-lg mx-12 mt-4"):("text-gray-800 font-semibold bg-yellow-400 hover:bg-transparent hover:text-white border-2 border-white py-2 px-16 rounded-lg mx-12 mt-4")}
-              >
-                {isSubmit ? (
-                  <div className="flex gap-6">
-                    <ImSpinner3 className="h-6 w-6 animate-spin text-gray-100" />
-                    <span>Cargando...</span>
-                  </div>
-                ) : (
-                  "Guardar"
-                )}
-              </button>
-            </form> */}
           </div>
           <div>
             <Image src="/mascota.png" width="380" height="380" alt="skipper" />

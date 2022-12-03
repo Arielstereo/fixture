@@ -1,14 +1,14 @@
 import dbConnection from "../../utils/database";
-import Octavos from "../../models/Octavos";
+import OctavosKids from "../../models/OctavosKids";
 import Layout from "../../components/Layout";
 import { Collapse, Table, Grid } from "@nextui-org/react";
 
-const ResultOctavos = ({ results }) => {
+const ResultOctavosKids = ({ results }) => {
   return (
     <Layout>
       <div className="p-8">
         <h1 className="text-sky-400 text-3xl md:text-6xl text-center font-bold mt-32 mb-8">
-          Pronósticos Octavos
+          Pronósticos Octavos Kids
         </h1>
         <div className="flex flex-wrap px-8">
           <Grid.Container gap={2} className="mb-16">
@@ -129,7 +129,7 @@ const ResultOctavos = ({ results }) => {
 export async function getServerSideProps() {
   try {
     await dbConnection();
-    const res = await Octavos.find({});
+    const res = await OctavosKids.find({});
     const results = res.map((item) => {
       const result = item.toObject();
       result._id = item.id.toString();
@@ -141,4 +141,4 @@ export async function getServerSideProps() {
   }
 }
 
-export default ResultOctavos;
+export default ResultOctavosKids;

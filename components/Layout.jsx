@@ -76,7 +76,7 @@ export default function Layout({ children }) {
               }`}
             >
               <ul className="flex flex-col pt-4 md:flex-row gap-6 text-white font-bold">
-              <li>
+                <li>
                   <Link href="/kids">
                     <a className="text-yellow-200 hover:text-sky-400 text-xl pl-4">
                       Kids
@@ -92,7 +92,7 @@ export default function Layout({ children }) {
                 </li>
                 <li>
                   <Dropdown>
-                  <Dropdown.Button
+                    <Dropdown.Button
                       flat
                       className="text-white font-bold text-xl pb-3"
                     >
@@ -104,12 +104,16 @@ export default function Layout({ children }) {
                     >
                       <Dropdown.Item>
                         <Link href="/results/podium">
-                          <a className="text-lg font-semibold px-8">Copa Tredi</a>
+                          <a className="text-lg font-semibold px-8">
+                            Copa Tredi
+                          </a>
                         </Link>
                       </Dropdown.Item>
                       <Dropdown.Item>
                         <Link href="/results/podiumKids">
-                          <a className="text-lg font-semibold px-8">Copa Kids</a>
+                          <a className="text-lg font-semibold px-8">
+                            Copa Kids
+                          </a>
                         </Link>
                       </Dropdown.Item>
                     </Dropdown.Menu>
@@ -128,33 +132,17 @@ export default function Layout({ children }) {
                       className="bg-sky-300"
                     >
                       <Dropdown.Item>
-                        <Link href="/results/resultsMatch1">
-                          <a className="text-lg text-red-600 font-semibold px-8">Fecha1 | Tredi</a>
+                        <Link href="/results/resultsOctavos">
+                          <a className="text-lg text-red-600 font-semibold px-8">
+                          Octavos | Tredi
+                          </a>
                         </Link>
                       </Dropdown.Item>
                       <Dropdown.Item>
-                        <Link href="/results/resultsMatch1Kids">
-                          <a className="text-lg font-semibold px-8">Fecha1 | Kids</a>
-                        </Link>
-                      </Dropdown.Item>
-                      <Dropdown.Item>
-                        <Link href="/results/resultsMatch2">
-                          <a className="text-lg text-red-600 font-semibold px-8">Fecha2 | Tredi</a>
-                        </Link>
-                      </Dropdown.Item>
-                      <Dropdown.Item>
-                        <Link href="/results/resultsMatch2Kids">
-                          <a className="text-lg font-semibold px-8">Fecha2 | Kids</a>
-                        </Link>
-                      </Dropdown.Item>
-                      <Dropdown.Item>
-                        <Link href="/results/resultsMatch3">
-                          <a className="text-lg text-red-600 font-semibold px-8">Fecha3 | Tredi</a>
-                        </Link>
-                      </Dropdown.Item>
-                      <Dropdown.Item>
-                        <Link href="/results/resultsMatch3Kids">
-                          <a className="text-lg font-semibold px-8">Fecha3 | Kids</a>
+                        <Link href="/results/resultsOctavosKids">
+                          <a className="text-lg font-semibold px-8">
+                            Octavos | Kids
+                          </a>
                         </Link>
                       </Dropdown.Item>
                     </Dropdown.Menu>
@@ -166,40 +154,24 @@ export default function Layout({ children }) {
                       flat
                       className="text-white font-bold text-xl pb-3"
                     >
-                      Fase de Grupos
+                      Octavos de final
                     </Dropdown.Button>
                     <Dropdown.Menu
                       aria-label="Static Actions"
                       className="bg-sky-300"
                     >
-                      {/* <Dropdown.Item>
-                        <Link href="/pronosticos/match1">
-                          <a className="text-lg text-red-600 font-semibold px-8">Fecha1 | Tredi</a>
+                      <Dropdown.Item>
+                        <Link href="/pronosticos/octavos">
+                          <a className="text-lg text-red-600 font-semibold px-8">
+                            Octavos | Tredi
+                          </a>
                         </Link>
                       </Dropdown.Item>
                       <Dropdown.Item>
-                        <Link href="/pronosticos/match1Kids">
-                          <a className="text-lg font-semibold px-8">Fecha1 | Kids</a>
-                        </Link>
-                      </Dropdown.Item>
-                      <Dropdown.Item>
-                        <Link href="/pronosticos/match2">
-                          <a className="text-lg text-red-600 font-semibold px-8">Fecha2 | Tredi</a>
-                        </Link>
-                      </Dropdown.Item>
-                      <Dropdown.Item>
-                        <Link href="/pronosticos/match2Kids">
-                          <a className="text-lg font-semibold px-8">Fecha2 | Kids</a>
-                        </Link>
-                      </Dropdown.Item> */}
-                      <Dropdown.Item>
-                        <Link href="/pronosticos/match3">
-                          <a className="text-lg text-red-600 font-semibold px-8">Fecha3 | Tredi</a>
-                        </Link>
-                      </Dropdown.Item>
-                      <Dropdown.Item>
-                        <Link href="/pronosticos/match3Kids">
-                          <a className="text-lg font-semibold px-8">Fecha3 | Kids</a>
+                        <Link href="/pronosticos/octavosKids">
+                          <a className="text-lg font-semibold px-8">
+                            Octavos | Kids
+                          </a>
                         </Link>
                       </Dropdown.Item>
                     </Dropdown.Menu>

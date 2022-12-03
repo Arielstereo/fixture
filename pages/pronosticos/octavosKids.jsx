@@ -5,7 +5,7 @@ import Layout from "../../components/Layout";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { ImSpinner3 } from "react-icons/im";
-import Octavos from "../../models/Octavos";
+import OctavosKids from "../../models/OctavosKids";
 import dbConnection from "../../utils/database";
 import toast from "react-hot-toast";
 
@@ -36,7 +36,7 @@ export default function Finals8({ octavos }) {
 
   const data = async (result) => {
     try {
-      const res = await fetch("/api/octavos", {
+      const res = await fetch("/api/octavosKids", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -136,7 +136,7 @@ export default function Finals8({ octavos }) {
           border: "2px solid #fff",
         },
       });
-      router.push("/results/resultsOctavos");
+      router.push("/results/resultsOctavosKids");
     }
   };
 
@@ -146,7 +146,7 @@ export default function Finals8({ octavos }) {
         <div className="flex flex-col text-center pt-32 pb-4 gap-4">
           <div className="flex flex-col gap-4">
             <h3 className="text-sky-400 font-bold text-4xl md:text-6xl py-4">
-              Octavos de final
+              Octavos de final - Kids
             </h3>
             <span className="text-yellow-500 text-lg font-semibold">
               * En esta fase cada acierto vale 3 puntos!
@@ -171,8 +171,8 @@ export default function Finals8({ octavos }) {
                 rounded
                 bordered
                 size="lg"
-                label="Apellido"
-                placeholder="Ingresa tu apellido"
+                label="Nombre del familiar"
+                placeholder="Nombre"
                 color="warning"
                 className="bg-white md:w-80"
                 onChange={(e) => setSurname(e.target.value)}
@@ -181,7 +181,7 @@ export default function Finals8({ octavos }) {
                 rounded
                 bordered
                 size="lg"
-                label="Contraseña (DNI)"
+                label="Contraseña (DNI adulto)"
                 placeholder="Ingrese su DNI"
                 color="warning"
                 className="bg-white md:w-80"
@@ -587,7 +587,7 @@ export default function Finals8({ octavos }) {
 export async function getServerSideProps() {
   try {
     await dbConnection();
-    const res = await Octavos.find({});
+    const res = await OctavosKids.find({});
     const octavos = res.map((item) => {
       const user = item.toObject();
       user._id = item.id.toString();
