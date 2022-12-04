@@ -1,10 +1,4 @@
-import {
-  Table,
-  Modal,
-  useModal,
-  Button,
-  Text,
-} from "@nextui-org/react";
+import { Table, Modal, useModal, Button, Text } from "@nextui-org/react";
 import Image from "next/image";
 import Layout from "../components/Layout";
 
@@ -14,44 +8,44 @@ export default function Positions() {
   const users = [
     {
       name: "Alejandra Quintairos",
-      points: 26,
+      points: 32,
     },
     {
       name: "Joaquin Valese",
-      points: 26,
+      points: 29,
     },
     {
       name: "Marcelo De Passos",
-      points: 24,
+      points: 27,
     },
     {
       name: "Angel Valese",
-      points: 22,
+      points: 25,
     },
-    
+
     {
       name: "Victor Gonzalez",
-      points: 22,
+      points: 25,
     },
     {
       name: "Xoana Albornoz",
-      points: 20,
+      points: 23,
     },
     {
       name: "Carlos Arrosa",
-      points: 16,
+      points: 22,
+    },
+    {
+      name: "Adolfo Arrosa",
+      points: 19,
+    },
+    {
+      name: "Marcela Gulla",
+      points: 17,
     },
     {
       name: "Maximo Coll",
       points: 16,
-    },
-    {
-      name: "Marcela Gulla",
-      points: 14,
-    },
-    {
-      name: "Adolfo Arrosa",
-      points: 13,
     },
     {
       name: "Eduardo Avila",
@@ -61,17 +55,17 @@ export default function Positions() {
 
   const kids = [
     {
-      name: "Joaquín",
-      points: 22,
+      name: "Jazmín",
+      points: 27,
     },
     {
-      name: "Jazmín",
-      points: 21,
+      name: "Joaquín",
+      points: 25,
     },
 
     {
       name: "Lautaro",
-      points: 15 ,
+      points: 18,
     },
     {
       name: "Dana",
