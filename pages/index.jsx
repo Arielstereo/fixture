@@ -153,7 +153,7 @@ export default function Home({ users }) {
           <div className="mt-8 mx-auto">
             <Image src="/logo.png" width="400" height="400" alt="logo" />
           </div>
-          <div className="flex flex-col gap-8 items-center mt-16 mb-8 mx-2 ">
+          <div className="flex flex-col gap-8 items-center mt-16 mb-16 mx-2 ">
           <h2 className="flex flex-col text-center pb-16 text-3xl md:text-5xl font-semibold text-yellow-400">Resultados <span className="text-sky-400">Octavos de Final</span> </h2>
             <div className="flex gap-4">
               <Image src="/usa.jpg" alt="qat" width="40" height="40" className="rounded-full"/>
@@ -190,6 +190,24 @@ export default function Home({ users }) {
               <span className="text-2xl text-sky-400 font-semibold">0</span>
               <h4 className="text-2xl font-semibold text-white">Senegal</h4>
               <Image src="/sen.png" alt="ecu" width="40" height="40" className="rounded-full"/>
+            </div>
+            <div className="flex gap-4">
+              <Image src="/cro.png" alt="qat" width="40" height="40" className="rounded-full"/>
+              <h4 className="text-2xl font-semibold text-white">Croacia</h4>
+              <span className="text-2xl text-sky-400 font-semibold">1</span>
+              <span className="text-2xl text-sky-400 font-semibold"> - </span>
+              <span className="text-2xl text-sky-400 font-semibold">1</span>
+              <h4 className="text-2xl font-semibold text-white">Japon</h4>
+              <Image src="/jap.jpg" alt="ecu" width="40" height="40" className="rounded-full"/>
+            </div>
+            <div className="flex gap-4">
+              <Image src="/bra.png" alt="qat" width="40" height="40" className="rounded-full"/>
+              <h4 className="text-2xl font-semibold text-white">Brasil</h4>
+              <span className="text-2xl text-sky-400 font-semibold">4</span>
+              <span className="text-2xl text-sky-400 font-semibold"> - </span>
+              <span className="text-2xl text-sky-400 font-semibold">1</span>
+              <h4 className="text-2xl font-semibold text-white">Corea</h4>
+              <Image src="/cor.gif" alt="ecu" width="40" height="40" className="rounded-full"/>
             </div>
             {/* <Link href="/pronosticos/octavos">
               <a className="text-2xl font-semibold text-yellow-400 hover:text-sky-400">

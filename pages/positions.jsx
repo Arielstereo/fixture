@@ -8,23 +8,24 @@ export default function Positions() {
   const users = [
     {
       name: "Alejandra Quintairos",
-      points: 38,
+      points: 44,
     },
     {
       name: "Joaquin Valese",
-      points: 35,
-    },
-    {
-      name: "Marcelo De Passos",
-      points: 30,
-    },
-    {
-      name: "Xoana Albornoz",
-      points: 29,
+      points: 38,
     },
     {
       name: "Angel Valese",
-      points: 28,
+      points: 34,
+    },
+    {
+      name: "Xoana Albornoz",
+      points: 32,
+    },
+
+    {
+      name: "Marcelo De Passos",
+      points: 30,
     },
 
     {
@@ -33,15 +34,15 @@ export default function Positions() {
     },
     {
       name: "Carlos Arrosa",
-      points: 25,
+      points: 28,
     },
     {
       name: "Adolfo Arrosa",
-      points: 25,
+      points: 28,
     },
     {
       name: "Marcela Gulla",
-      points: 23,
+      points: 26,
     },
     {
       name: "Maximo Coll",
@@ -55,12 +56,13 @@ export default function Positions() {
 
   const kids = [
     {
-      name: "Jazmín",
-      points: 33,
-    },
-    {
       name: "Joaquín",
-      points: 31,
+      points: 37,
+    },
+
+    {
+      name: "Jazmín",
+      points: 36,
     },
 
     {
