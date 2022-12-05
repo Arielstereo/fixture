@@ -173,6 +173,24 @@ export default function Home({ users }) {
               <h4 className="text-2xl font-semibold text-white">Australia</h4>
               <Image src="/aus.png" alt="ecu" width="40" height="40" className="rounded-full"/>
             </div>
+            <div className="flex gap-4">
+              <Image src="/fra.jpg" alt="qat" width="40" height="40" className="rounded-full"/>
+              <h4 className="text-2xl font-semibold text-white">Francia</h4>
+              <span className="text-2xl text-sky-400 font-semibold">3</span>
+              <span className="text-2xl text-sky-400 font-semibold"> - </span>
+              <span className="text-2xl text-sky-400 font-semibold">1</span>
+              <h4 className="text-2xl font-semibold text-white">Polonia</h4>
+              <Image src="/pol.jpg" alt="ecu" width="40" height="40" className="rounded-full"/>
+            </div>
+            <div className="flex gap-4">
+              <Image src="/ing.jpg" alt="qat" width="40" height="40" className="rounded-full"/>
+              <h4 className="text-2xl font-semibold text-white">Inglaterra</h4>
+              <span className="text-2xl text-sky-400 font-semibold">3</span>
+              <span className="text-2xl text-sky-400 font-semibold"> - </span>
+              <span className="text-2xl text-sky-400 font-semibold">0</span>
+              <h4 className="text-2xl font-semibold text-white">Senegal</h4>
+              <Image src="/sen.png" alt="ecu" width="40" height="40" className="rounded-full"/>
+            </div>
             {/* <Link href="/pronosticos/octavos">
               <a className="text-2xl font-semibold text-yellow-400 hover:text-sky-400">
                 Completa los octavos de final
