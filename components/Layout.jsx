@@ -132,16 +132,16 @@ export default function Layout({ children }) {
                       className="bg-sky-300"
                     >
                       <Dropdown.Item>
-                        <Link href="/results/resultsOctavos">
+                        <Link href="/results/resultsCuartos">
                           <a className="text-lg text-red-600 font-semibold px-8">
-                          Octavos | Tredi
+                          Cuartos | Tredi
                           </a>
                         </Link>
                       </Dropdown.Item>
                       <Dropdown.Item>
-                        <Link href="/results/resultsOctavosKids">
+                        <Link href="/results/resultsCuartosKids">
                           <a className="text-lg font-semibold px-8">
-                            Octavos | Kids
+                            Cuartos | Kids
                           </a>
                         </Link>
                       </Dropdown.Item>
@@ -154,23 +154,23 @@ export default function Layout({ children }) {
                       flat
                       className="text-white font-bold text-xl pb-3"
                     >
-                      Octavos de final
+                      Cuartos de final
                     </Dropdown.Button>
                     <Dropdown.Menu
                       aria-label="Static Actions"
                       className="bg-sky-300"
                     >
                       <Dropdown.Item>
-                        <Link href="/pronosticos/octavos">
+                        <Link href="/pronosticos/cuartos">
                           <a className="text-lg text-red-600 font-semibold px-8">
-                            Octavos | Tredi
+                            Cuartos | Tredi
                           </a>
                         </Link>
                       </Dropdown.Item>
                       <Dropdown.Item>
-                        <Link href="/pronosticos/octavosKids">
+                        <Link href="/pronosticos/cuartosKids">
                           <a className="text-lg font-semibold px-8">
-                            Octavos | Kids
+                            Cuartos | Kids
                           </a>
                         </Link>
                       </Dropdown.Item>

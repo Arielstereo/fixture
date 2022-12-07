@@ -130,7 +130,7 @@ export default function Finals4({ cuartosKids }) {
         <div className="flex flex-col text-center pt-32 pb-4 gap-4">
           <div className="flex flex-col gap-4">
             <h3 className="text-sky-400 font-bold text-4xl md:text-6xl py-4">
-              Cuartos de final
+              Cuartos de final - Kids
             </h3>
             <span className="text-yellow-500 text-lg font-semibold">
               * En esta fase cada acierto vale 5 puntos!

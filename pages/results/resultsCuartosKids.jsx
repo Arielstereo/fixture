@@ -8,7 +8,7 @@ const ResultCuartosKids = ({ results }) => {
     <Layout>
       <div className="p-8">
         <h1 className="text-sky-400 text-3xl md:text-6xl text-center font-bold mt-32 mb-8">
-          Pronósticos Cuartos
+          Pronósticos Cuartos - Kids
         </h1>
         <div className="flex flex-wrap px-8">
           <Grid.Container gap={2} className="mb-16">
