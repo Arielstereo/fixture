@@ -155,9 +155,9 @@ export default function HomeTwo({ kids }) {
           </div>
           <div className="flex flex-col items-center mt-16 mb-8 mx-8 ">
           <Image src="/trofeo.png" width="400" height="400" alt="logo" />
-          <Link href="/pronosticos/octavosKids">
+          <Link href="/pronosticos/cuartosKids">
             <a className="text-xl font-semibold text-yellow-400 hover:text-sky-400">
-              Completa los octavos de final
+              Completa los cuartos de final
             </a>
           </Link>
           </div>

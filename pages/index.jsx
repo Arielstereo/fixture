@@ -209,11 +209,29 @@ export default function Home({ users }) {
               <h4 className="text-2xl font-semibold text-white">Corea</h4>
               <Image src="/cor.gif" alt="ecu" width="40" height="40" className="rounded-full"/>
             </div>
-            {/* <Link href="/pronosticos/octavos">
+            <div className="flex gap-4">
+              <Image src="/esp.png" alt="qat" width="40" height="40" className="rounded-full"/>
+              <h4 className="text-2xl font-semibold text-white">España</h4>
+              <span className="text-2xl text-sky-400 font-semibold">0</span>
+              <span className="text-2xl text-sky-400 font-semibold"> - </span>
+              <span className="text-2xl text-sky-400 font-semibold">0</span>
+              <h4 className="text-2xl font-semibold text-white">Marruecos</h4>
+              <Image src="/mar.gif" alt="ecu" width="40" height="40" className="rounded-full"/>
+            </div>
+            <div className="flex gap-4">
+              <Image src="/por.jpg" alt="qat" width="40" height="40" className="rounded-full"/>
+              <h4 className="text-2xl font-semibold text-white">Portugal</h4>
+              <span className="text-2xl text-sky-400 font-semibold">6</span>
+              <span className="text-2xl text-sky-400 font-semibold"> - </span>
+              <span className="text-2xl text-sky-400 font-semibold">1</span>
+              <h4 className="text-2xl font-semibold text-white">Suiza</h4>
+              <Image src="/sui.jpg" alt="ecu" width="40" height="40" className="rounded-full"/>
+            </div>
+            <Link href="/pronosticos/cuartos">
               <a className="text-2xl font-semibold text-yellow-400 hover:text-sky-400">
-                Completa los octavos de final
+                Completa los cuartos de final
               </a>
-            </Link> */}
+            </Link>
           </div>
           <div>
             <Image src="/skipper.png" width="500" height="500" alt="skipper" />
