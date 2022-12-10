@@ -15,12 +15,16 @@ export default function Positions() {
       points: 41,
     },
     {
+      name: "Angel Valese",
+      points: 39,
+    },
+    {
       name: "Marcelo De Passos",
       points: 36,
     },
     {
-      name: "Angel Valese",
-      points: 34,
+      name: "Victor Gonzalez",
+      points: 33,
     },
     {
       name: "Xoana Albornoz",
@@ -35,10 +39,6 @@ export default function Positions() {
     {
       name: "Marcela Gulla",
       points: 29,
-    },
-    {
-      name: "Victor Gonzalez",
-      points: 28,
     },
     {
       name: "Adolfo Arrosa",
