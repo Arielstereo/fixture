@@ -342,7 +342,7 @@ export default function Finals4({ cuartos }) {
                         <Radio value="Empate" size="md">
                           <span className="text-base">Empate</span>
                         </Radio>
-                        <Radio value="Potugal" size="md">
+                        <Radio value="Portugal" size="md">
                           <div className="flex gap-8">
                             <span className="text-base">Portugal</span>
                             <Image
