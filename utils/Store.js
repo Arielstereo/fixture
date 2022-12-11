@@ -18,6 +18,7 @@ export const AuthProvider = ({ children }) => {
   const [match3, setMatch3] = useState({});
   const [octavos, setOctavos] = useState({});
   const [cuartos, setCuartos] = useState({});
+  const [semis, setSemis] = useState({});
   const [password, setPassword] = useState("");
 
 
@@ -47,7 +48,9 @@ export const AuthProvider = ({ children }) => {
         octavos,
         setOctavos,
         cuartos,
-        setCuartos
+        setCuartos,
+        semis,
+        setSemis
       }}
     >
       {children}

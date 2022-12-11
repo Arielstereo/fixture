@@ -19,16 +19,16 @@ export default function Positions() {
       points: 39,
     },
     {
+      name: "Xoana Albornoz",
+      points: 37,
+    },
+    {
       name: "Marcelo De Passos",
       points: 36,
     },
     {
       name: "Victor Gonzalez",
       points: 33,
-    },
-    {
-      name: "Xoana Albornoz",
-      points: 32,
     },
 
     {
@@ -57,17 +57,17 @@ export default function Positions() {
   const kids = [
     {
       name: "Joaquín",
-      points: 40,
+      points: 45,
     },
 
     {
       name: "Jazmín",
-      points: 36,
+      points: 41,
     },
 
     {
       name: "Lautaro",
-      points: 21,
+      points: 26,
     },
     {
       name: "Dana",

@@ -154,23 +154,23 @@ export default function Layout({ children }) {
                       flat
                       className="text-white font-bold text-xl pb-3"
                     >
-                      Cuartos de final
+                      Semifinales
                     </Dropdown.Button>
                     <Dropdown.Menu
                       aria-label="Static Actions"
                       className="bg-sky-300"
                     >
                       <Dropdown.Item>
-                        <Link href="/pronosticos/cuartos">
+                        <Link href="/pronosticos/semis">
                           <a className="text-lg text-red-600 font-semibold px-8">
-                            Cuartos | Tredi
+                            Semis | Tredi
                           </a>
                         </Link>
                       </Dropdown.Item>
                       <Dropdown.Item>
-                        <Link href="/pronosticos/cuartosKids">
+                        <Link href="/pronosticos/semisKids">
                           <a className="text-lg font-semibold px-8">
-                            Cuartos | Kids
+                            Semis | Kids
                           </a>
                         </Link>
                       </Dropdown.Item>

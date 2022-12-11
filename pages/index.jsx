@@ -173,12 +173,30 @@ export default function Home({ users }) {
               <h4 className="text-2xl font-semibold text-white">Holanda</h4>
               <Image src="/hol.png" alt="ecu" width="40" height="40" className="rounded-full"/>
             </div>
+            <div className="flex gap-4">
+              <Image src="/mar.gif" alt="qat" width="40" height="40" className="rounded-full"/>
+              <h4 className="text-2xl font-semibold text-white">Marruecos</h4>
+              <span className="text-2xl text-sky-400 font-semibold">1</span>
+              <span className="text-2xl text-sky-400 font-semibold"> - </span>
+              <span className="text-2xl text-sky-400 font-semibold">0</span>
+              <h4 className="text-2xl font-semibold text-white">Portugal</h4>
+              <Image src="/por.jpg" alt="ecu" width="40" height="40" className="rounded-full"/>
+            </div>
+            <div className="flex gap-4">
+              <Image src="/fra.jpg" alt="qat" width="40" height="40" className="rounded-full"/>
+              <h4 className="text-2xl font-semibold text-white">Francia</h4>
+              <span className="text-2xl text-sky-400 font-semibold">2</span>
+              <span className="text-2xl text-sky-400 font-semibold"> - </span>
+              <span className="text-2xl text-sky-400 font-semibold">1</span>
+              <h4 className="text-2xl font-semibold text-white">Inglaterra</h4>
+              <Image src="/ing.jpg" alt="ecu" width="40" height="40" className="rounded-full"/>
+            </div>
 
-            {/* <Link href="/pronosticos/cuartos">
+            <Link href="/pronosticos/semis">
               <a className="text-2xl font-semibold text-yellow-400 hover:text-sky-400">
-                Completa los cuartos de final
+                Completa las semifinales
               </a>
-            </Link> */}
+            </Link>
           </div>
           <div>
             <Image src="/skipper.png" width="500" height="500" alt="skipper" />
