@@ -132,16 +132,16 @@ export default function Layout({ children }) {
                       className="bg-sky-300"
                     >
                       <Dropdown.Item>
-                        <Link href="/results/resultsCuartos">
+                        <Link href="/results/resultsSemis">
                           <a className="text-lg text-red-600 font-semibold px-8">
-                          Cuartos | Tredi
+                          Semis | Tredi
                           </a>
                         </Link>
                       </Dropdown.Item>
                       <Dropdown.Item>
-                        <Link href="/results/resultsCuartosKids">
+                        <Link href="/results/resultsSemisKids">
                           <a className="text-lg font-semibold px-8">
-                            Cuartos | Kids
+                            Semis | Kids
                           </a>
                         </Link>
                       </Dropdown.Item>
