@@ -132,16 +132,16 @@ export default function Layout({ children }) {
                       className="bg-sky-300"
                     >
                       <Dropdown.Item>
-                        <Link href="/results/resultsSemis">
+                        <Link href="/results/resultsFinals">
                           <a className="text-lg text-red-600 font-semibold px-8">
-                          Semis | Tredi
+                          Final | Tredi
                           </a>
                         </Link>
                       </Dropdown.Item>
                       <Dropdown.Item>
-                        <Link href="/results/resultsSemisKids">
+                        <Link href="/results/resultsFinalsKids">
                           <a className="text-lg font-semibold px-8">
-                            Semis | Kids
+                            Final | Kids
                           </a>
                         </Link>
                       </Dropdown.Item>
@@ -154,23 +154,23 @@ export default function Layout({ children }) {
                       flat
                       className="text-white font-bold text-xl pb-3"
                     >
-                      Semifinales
+                      Final
                     </Dropdown.Button>
                     <Dropdown.Menu
                       aria-label="Static Actions"
                       className="bg-sky-300"
                     >
                       <Dropdown.Item>
-                        <Link href="/pronosticos/semis">
+                        <Link href="/pronosticos/finals">
                           <a className="text-lg text-red-600 font-semibold px-8">
-                            Semis | Tredi
+                            Final | Tredi
                           </a>
                         </Link>
                       </Dropdown.Item>
                       <Dropdown.Item>
-                        <Link href="/pronosticos/semisKids">
+                        <Link href="/pronosticos/finalsKids">
                           <a className="text-lg font-semibold px-8">
-                            Semis | Kids
+                            Final | Kids
                           </a>
                         </Link>
                       </Dropdown.Item>

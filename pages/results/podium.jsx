@@ -41,13 +41,6 @@ const Podium = ({ users }) => {
             </Table>
           ))}
         </div>
-        <div className="text-center pb-8">
-          <Link href="/pronosticos/match1">
-            <a className="text-xl font-semibold text-yellow-400 hover:text-sky-400">
-              Completa la Fecha 1
-            </a>
-          </Link>
-        </div>
       </div>
     </Layout>
   );

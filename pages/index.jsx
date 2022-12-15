@@ -164,12 +164,21 @@ export default function Home({ users }) {
               <h4 className="text-2xl font-semibold text-white">Croacia</h4>
               <Image src="/cro.png" alt="ecu" width="40" height="40" className="rounded-full"/>
             </div>
+            <div className="flex gap-4">
+              <Image src="/fra.jpg" alt="qat" width="40" height="40" className="rounded-full"/>
+              <h4 className="text-2xl font-semibold text-white">Francia</h4>
+              <span className="text-2xl text-sky-400 font-semibold">2</span>
+              <span className="text-2xl text-sky-400 font-semibold"> - </span>
+              <span className="text-2xl text-sky-400 font-semibold">0</span>
+              <h4 className="text-2xl font-semibold text-white">Marruecos</h4>
+              <Image src="/mar.gif" alt="ecu" width="40" height="40" className="rounded-full"/>
+            </div>
           
-            {/* <Link href="/pronosticos/semis">
+            <Link href="/pronosticos/finals">
               <a className="text-2xl font-semibold text-yellow-400 hover:text-sky-400">
-                Completa las semifinales
+                Completa la final y el tercer puesto!
               </a>
-            </Link> */}
+            </Link>
           </div>
           <div>
             <Image src="/skipper.png" width="500" height="500" alt="skipper" />
