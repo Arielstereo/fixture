@@ -154,17 +154,17 @@ export default function Home({ users }) {
             <Image src="/logo.png" width="400" height="400" alt="logo" />
           </div>
           <div className="flex flex-col gap-8 items-center mt-2 mb-16 mx-2 ">
-          <h2 className="flex flex-col text-center pb-16 text-3xl md:text-5xl font-semibold text-yellow-400">Resultados <span className="text-sky-400">Semifinales</span> </h2>
+          <h2 className="flex flex-col text-center pb-16 text-3xl md:text-5xl font-semibold text-yellow-400">Resultado <span className="text-sky-400">Tercer Puesto</span> </h2>
             <div className="flex gap-4">
-              <Image src="/arg.jpg" alt="qat" width="40" height="40" className="rounded-full"/>
-              <h4 className="text-2xl font-semibold text-white">Argentina</h4>
-              <span className="text-2xl text-sky-400 font-semibold">3</span>
+              <Image src="/mar.gif" alt="qat" width="40" height="40" className="rounded-full"/>
+              <h4 className="text-2xl font-semibold text-white">Marruecos</h4>
+              <span className="text-2xl text-sky-400 font-semibold">1</span>
               <span className="text-2xl text-sky-400 font-semibold"> - </span>
-              <span className="text-2xl text-sky-400 font-semibold">0</span>
+              <span className="text-2xl text-sky-400 font-semibold">2</span>
               <h4 className="text-2xl font-semibold text-white">Croacia</h4>
               <Image src="/cro.png" alt="ecu" width="40" height="40" className="rounded-full"/>
             </div>
-            <div className="flex gap-4">
+            {/* <div className="flex gap-4">
               <Image src="/fra.jpg" alt="qat" width="40" height="40" className="rounded-full"/>
               <h4 className="text-2xl font-semibold text-white">Francia</h4>
               <span className="text-2xl text-sky-400 font-semibold">2</span>
@@ -172,13 +172,8 @@ export default function Home({ users }) {
               <span className="text-2xl text-sky-400 font-semibold">0</span>
               <h4 className="text-2xl font-semibold text-white">Marruecos</h4>
               <Image src="/mar.gif" alt="ecu" width="40" height="40" className="rounded-full"/>
-            </div>
+            </div> */}
           
-            <Link href="/pronosticos/finals">
-              <a className="text-2xl font-semibold text-yellow-400 hover:text-sky-400">
-                Completa la final y el tercer puesto!
-              </a>
-            </Link>
           </div>
           <div>
             <Image src="/skipper.png" width="500" height="500" alt="skipper" />
