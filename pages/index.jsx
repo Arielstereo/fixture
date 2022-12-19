@@ -154,26 +154,23 @@ export default function Home({ users }) {
             <Image src="/logo.png" width="400" height="400" alt="logo" />
           </div>
           <div className="flex flex-col gap-8 items-center mt-2 mb-16 mx-2 ">
-          <h2 className="flex flex-col text-center pb-16 text-3xl md:text-5xl font-semibold text-yellow-400">Resultado <span className="text-sky-400">Tercer Puesto</span> </h2>
-            <div className="flex gap-4">
-              <Image src="/mar.gif" alt="qat" width="40" height="40" className="rounded-full"/>
-              <h4 className="text-2xl font-semibold text-white">Marruecos</h4>
-              <span className="text-2xl text-sky-400 font-semibold">1</span>
-              <span className="text-2xl text-sky-400 font-semibold"> - </span>
-              <span className="text-2xl text-sky-400 font-semibold">2</span>
-              <h4 className="text-2xl font-semibold text-white">Croacia</h4>
-              <Image src="/cro.png" alt="ecu" width="40" height="40" className="rounded-full"/>
+            <h2 className="flex flex-col text-center pb-16 text-3xl md:text-6xl font-semibold text-yellow-400">
+              Argentina<span className="text-sky-400">Campeón del Mundo!!</span>
+            </h2>
+            <div className="flex flex-col md:flex-row gap-4">
+              <div className="flex flex-col gap-4">
+                <h2 className="text-yellow-400 text-2xl md:text-4xl">
+                  {" "}
+                  <span className="text-sky-400">1° Puesto</span> Angel Valese
+                </h2>
+                <h2 className="text-yellow-400 text-2xl md:text-4xl">
+                  <span className="text-sky-400">2° Puesto</span> Joaquín Valese
+                </h2>
+                <h2 className="text-yellow-400 text-2xl md:text-4xl">
+                  <span className="text-sky-400">3° Puesto</span> Xoana Albornoz
+                </h2>
+              </div>
             </div>
-            {/* <div className="flex gap-4">
-              <Image src="/fra.jpg" alt="qat" width="40" height="40" className="rounded-full"/>
-              <h4 className="text-2xl font-semibold text-white">Francia</h4>
-              <span className="text-2xl text-sky-400 font-semibold">2</span>
-              <span className="text-2xl text-sky-400 font-semibold"> - </span>
-              <span className="text-2xl text-sky-400 font-semibold">0</span>
-              <h4 className="text-2xl font-semibold text-white">Marruecos</h4>
-              <Image src="/mar.gif" alt="ecu" width="40" height="40" className="rounded-full"/>
-            </div> */}
-          
           </div>
           <div>
             <Image src="/skipper.png" width="500" height="500" alt="skipper" />

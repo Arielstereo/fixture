@@ -153,13 +153,24 @@ export default function HomeTwo({ kids }) {
           <div className="mt-8 mx-auto">
             <Image src="/logo.png" width="400" height="400" alt="logo" />
           </div>
-          <div className="flex flex-col items-center mt-16 mb-8 mx-8 ">
-          <Image src="/trofeo.png" width="400" height="400" alt="logo" />
-          <Link href="/pronosticos/finalsKids">
-            <a className="text-xl font-semibold text-yellow-400 hover:text-sky-400">
-              Completa la final y tercer puesto
-            </a>
-          </Link>
+          <div className="flex flex-col gap-8 items-center mt-6 mb-16 mx-2 ">
+            <h2 className="flex flex-col text-center pb-16 text-3xl md:text-6xl font-semibold text-yellow-400">
+              Argentina<span className="text-sky-400">Campeón del Mundo!!</span>
+            </h2>
+            <div className="flex flex-col md:flex-row gap-4">
+              <div className="flex flex-col gap-4">
+                <h2 className="text-yellow-400 text-2xl md:text-4xl">
+                  {" "}
+                  <span className="text-sky-400">1° Puesto</span> Joaquin
+                </h2>
+                <h2 className="text-yellow-400 text-2xl md:text-4xl">
+                  <span className="text-sky-400">2° Puesto</span> Lautaro
+                </h2>
+                <h2 className="text-yellow-400 text-2xl md:text-4xl">
+                  <span className="text-sky-400">3° Puesto</span> Jazmin
+                </h2>
+              </div>
+            </div>
           </div>
           <div>
             <Image src="/mascota.png" width="380" height="380" alt="skipper" />
